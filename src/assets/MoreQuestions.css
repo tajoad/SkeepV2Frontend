@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap');
+
+body{
+    background-color: #E5E5E5;
+}
+.form-horizontal{
+    background-color: white;
+  }
+.cont{
+    background-color: #E5E5E5;
+    height: 100%;
+}
+.all-cont{
+    background-color: white;
+    width: 428px;
+     height: 926px;
+}
+.header{
+    background-color: #131313;
+    width: 100%;
+    height: 40px;
+}
+.main{
+    padding: 25px 45px;
+}
+
+/* .small-box {
+  padding: 0px 4px;
+  max-width: 100%;
+} */
+.input input{
+    border-radius: 0;
+    padding: 12px;
+    margin-bottom: 35px;
+    background-color: #EEEEEE;
+}
+::placeholder {
+    padding-left: 10px;
+    color: rgba(140, 140, 140, 1);
+    height: auto;
+    font-size: 12.953241348266602px;
+    align-self: auto;
+    font-style: Regular;
+    font-family: 'Sora', sans-serif;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+    position: absolute;
+    top: 14px;
+  }
+.aboutme-aboutme {
+    width: 100%;
+    height: 926px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  /* input[type="date"]::-webkit-calendar-picker-indicator {
+
+} */
+    .more-btn {
+        margin-top: 490px;
+    }
+  .text-right {
+    color: rgba(19, 19, 19, 1);
+    font-size: 17.696121215820312px;
+    align-self: auto;
+    font-style: Bold;
+    text-align: left;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+  }
+
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #114b5f; 
+}
+
+.aboutyou-btn {
+  margin-top: 180px;
+}
+/************** 
+ Input Fields
+***************/
+#date{
+  display: block;
+  outline: none;
+}
+
+input::-webkit-datetime-edit-day-field:focus,
+input::-webkit-datetime-edit-month-field:focus,
+input::-webkit-datetime-edit-year-field:focus {
+    background-color: #EEEEEE;
+    color: black;
+    outline: none;
+}
+
+.profile-button {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 16px;
+    border-radius: 0;
+    margin-top: 13px;
+    padding: 7px 0px;
+    width: 57%;
+    align-self: auto;
+    font-style: SemiBold;
+    text-align: center;
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    background-color: #4A9BC7;
+    text-decoration: none; 
+  }
+
+
+

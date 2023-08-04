@@ -1,0 +1,36 @@
+{
+  "name": "skip",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "@meforma/vue-toaster": "^1.3.0",
+    "@vuelidate/core": "^2.0.0",
+    "@vuelidate/validators": "^2.0.0",
+    "@vuepic/vue-datepicker": "^4.0.1",
+    "@websanova/vue-upload": "^2.1.9",
+    "bootstrap": "^5.0.1",
+    "dateformat": "^5.0.3",
+    "v-file-upload": "^3.1.7",
+    "vue": "^3.2.47",
+    "vue-anka-cropper": "^1.1.0",
+    "vue-router": "^4.1.6",
+    "vue-upload-component": "^2.8.23",
+    "vuejs-datepicker": "^1.6.2"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vue/eslint-config-prettier": "^7.1.0",
+    "eslint": "^8.34.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "prettier": "^2.8.4",
+    "vite": "^4.1.3"
+  }
+}

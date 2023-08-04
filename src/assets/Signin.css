@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap');
+.cont {
+  height: 926px;
+}
+.all-cont {
+  background-image: url(../images/background2.png);
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+.header {
+  width: 100%;
+  height: 40px;
+}
+.main {
+  width: 100%;
+  padding: 25px 45px;
+}
+
+.input.small-box1 {
+  padding-left: 4px;
+}
+.input.small-box2 {
+  padding-right: 5px;
+}
+/* .form-setup {
+margin-bottom: 20px;
+width: 100%;
+height: 50px;
+} */
+.input input {
+  border-radius: 0;
+  padding: 12px;
+  width: 100%;
+}
+.input-t {
+  border-radius: 0;
+  align-items: center;
+  width: 100%;
+  height: 37px;
+}
+
+.input-date {
+  border: 0;
+  cursor: pointer;
+}
+
+.input-date::placeholder {
+  color: rgba(140, 140, 140, 1);
+  height: auto;
+  font-size: 12.953241348266602px;
+  align-self: auto;
+  font-style: Regular;
+  font-family: 'Sora', sans-serif;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  position: absolute;
+  top: 11px;
+}
+.input-top {
+  border-radius: 0;
+  padding-left: 0px;
+}
+
+input[type='text'] {
+  padding-left: 25px;
+}
+input[type='password'] {
+  padding-left: 25px;
+}
+::placeholder {
+  color: rgba(140, 140, 140, 1);
+  height: auto;
+  font-size: 12.953241348266602px;
+  align-self: auto;
+  font-style: Regular;
+  font-family: 'Sora', sans-serif;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  position: absolute;
+  top: 16px;
+}
+.aboutme-aboutme {
+  width: 100%;
+  height: 926px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 1);
+}
+.aboutme-rectangle1 {
+  top: 0px;
+  left: 0px;
+  width: 428px;
+  height: 52px;
+  position: absolute;
+}
+/* input[type="date"]::-webkit-calendar-picker-indicator {
+
+} */
+
+.sign-up-text13 {
+  font-weight: 300;
+}
+.sign-up-text14 {
+  font-weight: 900;
+  border: 0;
+  background-color: white;
+  text-decoration: none;
+  cursor: pointer;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: 'Sora';
+  line-height: normal;
+  font-stretch: normal;
+}
+
+.sign-up-text12 {
+  color: rgba(0, 0, 0, 1);
+  width: 300px;
+  height: auto;
+  font-size: 12px;
+  align-self: auto;
+  font-style: Light;
+  text-align: left;
+  font-family: 'Sora';
+  font-weight: 300;
+  line-height: normal;
+  font-stretch: normal;
+  margin-top: 25px;
+  text-decoration: none;
+}
+
+.text-right {
+  color: rgba(19, 19, 19, 1);
+  font-size: 17.696121215820312px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+.sign-in-text6 {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  font-size: 12px;
+  align-self: auto;
+  font-style: Light;
+  text-align: 'left';
+  font-family: 'Sora';
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #114b5f;
+}
+/************** 
+ Input Fields
+***************/
+#date {
+  display: block;
+  outline: none;
+}
+
+.input-errors {
+  color: rgba(193, 9, 9, 0.799);
+  text-align: center;
+  display: inline;
+  width: 100%;
+  font-size: small;
+}
+
+.profile-button {
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 7px 30px;
+  background-color: #005ba1;
+  border-radius: 0;
+  font-style: SemiBold;
+  font-family: 'Sora';
+  font-weight: 600;
+  line-height: 20.16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .all-cont {
+    background-color: white;
+    height: 100%;
+    min-height: 100vh;
+    width: 100vw;
+  }
+}

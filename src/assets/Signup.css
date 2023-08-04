@@ -44,8 +44,7 @@ body{
     background-repeat: no-repeat;
 }
 .right{
-    padding-left: 12%;
-    padding-top: 3%;
+    padding: 1% 7%;
     height: 100%;
 }
 .right h2{
@@ -139,6 +138,7 @@ a{
     font-size: 12.06px;
     font-weight: 300;
     text-align: center;
+    width: 100%;
     padding-top: 1.5em;
 }
 @media(max-width: 1200px){
@@ -198,11 +198,14 @@ a{
         height: 40vw;
         
     }
+    .right{
+        padding: 1% 12%;
+    }
     input{   
-        width: 87%;
+        width: 100%;
     }
     .submit{
-        width: 87%;
+        width: 100%;
     }
     .main{
         display: flex;
@@ -217,7 +220,7 @@ a{
         flex-direction: column;
     /* justify-content: center; */
         align-items: center;
-        width: 87%;
+        width: 100%;
     }
     .google{
         padding-inline: 4em;

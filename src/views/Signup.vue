@@ -6,7 +6,6 @@
       <div class="background"></div>
     </div>
     <div class="right">
-      <form autocomplete="off" action="" novalidate>
         <div class="inner-right">
           <h2>Sign up</h2>
           <div class="inptags">
@@ -82,7 +81,6 @@
             >
           </div>
         </div>
-      </form>
     </div>
   </div>
 </template>

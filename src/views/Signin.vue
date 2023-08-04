@@ -1,61 +1,67 @@
 <template>
-  <div class="container-fluid px-0 cont col-md-6 d-flex justify-content-center">
-    <div class="all-cont">
-      <div class="header"></div>
-      <div class="main">
-        <div class="d-flex justify-content-between align-items-center mb-2">
-          <h4 class="text-right">Sign In</h4>
-        </div>
+  <div class="main">
+    <div class="left">
+      <img src="../asset/skeep white 1.png" alt="" class="img" />
+      <p>Start the conversation</p>
+      <div class="background"></div>
+    </div>
+    <div class="right">
+      <div class="inner-right">
         <form autocomplete="off" action="" novalidate>
-          <div class="align-items-center"></div>
-          <div class="form-setup">
-            <div class="col mb-2 input">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Email"
-                autocomplete="nope"
-                v-model="v$.user.email.$model"
-                required
-              />
-            </div>
-            <div class="input-errors" v-for="(error, index) of v$.user.email.$errors" :key="index">
-              <div class="error-msg">{{ error.$message }}</div>
-            </div>
-          </div>
-          <div class="form-setup">
-            <div class="col mb-2 input">
-              <input
-                type="password"
-                class="form-control"
-                placeholder="Password"
-                autocomplete="new-password"
-                v-model="v$.user.password.$model"
-                required
-              />
-            </div>
-            <div
-              class="input-errors"
-              v-for="(error, index) of v$.user.password.$errors"
-              :key="index"
-            >
-              <div class="error-msg">{{ error.$message }}</div>
-            </div>
-          </div>
-          <div class="col-md border-right">
-            <div class="">
-              <button
-                class="btn profile-button form-submit"
-                type="button"
-                @click="submitSignIn()"
-                :disabled="v$.user.$invalid"
+          <h2>Sign In</h2>
+          <div class="inptags">
+            <div class="form-setup">
+              <div class="col mb-2 input">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Email"
+                  autocomplete="nope"
+                  v-model="v$.user.email.$model"
+                  required
+                />
+              </div>
+              <div
+                class="input-errors"
+                v-for="(error, index) of v$.user.email.$errors"
+                :key="index"
               >
-                Sign In
-              </button>
+                <div class="error-msg">{{ error.$message }}</div>
+              </div>
             </div>
+            <div class="form-setup">
+              <div class="col mb-2 input">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Password"
+                  autocomplete="new-password"
+                  v-model="v$.user.password.$model"
+                  required
+                />
+              </div>
+              <div
+                class="input-errors"
+                v-for="(error, index) of v$.user.password.$errors"
+                :key="index"
+              >
+                <div class="error-msg">{{ error.$message }}</div>
+              </div>
+            </div>
+            <button
+              class="btn profile-button form-submit submit"
+              type="button"
+              @click="submitSignIn()"
+              :disabled="v$.user.$invalid"
+            >
+              Sign In
+            </button>
           </div>
-          <div class="sign-in-text6">
-            <router-link to="/signin" class="sign-in-text6">Forgot Password?</router-link>
+          <div class="foot">
+            <router-link to="/"> Don't have an account?<strong> Sign up </strong></router-link>
+          </div>
+          <div class="foot">
+            <router-link to="/signin"> forgot password?<strong> Click me</strong></router-link>
           </div>
         </form>
       </div>

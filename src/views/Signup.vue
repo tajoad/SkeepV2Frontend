@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div class="left">
-      <img src="../images/skeep white 1.png" alt="" class="img" />
+      <img src="../images/skeep22.png" alt="" class="img" />
       <p>Start the conversation</p>
       <div class="background"></div>
     </div>
@@ -60,13 +60,13 @@
         <div class="socialmedia">
           <p>sign up with</p>
           <a href="#" class="google">
-            <img src="../asset/search 1.png" alt="" /> Sign up with google</a
+            <img src="../asset/search1.png" alt="" /> Sign up with google</a
           >
           <a href="#" class="facebook">
-            <img src="../asset/Vector (1).png" alt="" /> Sign up with facebook</a
+            <img src="../asset/Vector1.png" alt="" /> Sign up with facebook</a
           >
           <a href="#" class="twitter">
-            <img src="../asset/Vector (2).png" alt="" /> Sign up with Twitter</a
+            <img src="../asset/Vector2.png" alt="" /> Sign up with Twitter</a
           >
         </div>
         <div class="foot">

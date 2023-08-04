@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div class="left">
-      <img src="../asset/skeep white 1.png" alt="" class="img" />
+      <img src="../asset/skeep1.png" alt="" class="img" />
       <p>Start the conversation</p>
       <div class="background"></div>
     </div>

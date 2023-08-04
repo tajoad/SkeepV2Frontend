@@ -6,10 +6,12 @@
       <div class="background"></div>
     </div>
     <div class="right">
-      <div class="inner-right">
-        <h2>Sign up</h2>
-        <div class="inptags">
-          <div class="form-setup">
+      <form autocomplete="off" action="" novalidate>
+        <div class="inner-right">
+          <h2>Sign up</h2>
+          <div class="inptags">
+            <div class="align-items-center"></div>
+             <div class="form-setup">
             <div class="col mb-2 input">
               <input
                 type="text"
@@ -52,29 +54,35 @@
               required
             />
           </div>
-          <button class="submit" type="button" @click="submitSignUp()" :disabled="v$.user.$invalid">
-            Create account
-          </button>
-        </div>
+            <button
+              class="submit"
+              type="button"
+              @click="submitSignUp()"
+              :disabled="v$.user.$invalid"
+            >
+              Create account
+            </button>
+          </div>
 
-        <div class="socialmedia">
-          <p>sign up with</p>
-          <a href="#" class="google">
-            <img src="../asset/search1.png" alt="" /> Sign up with google</a
-          >
-          <a href="#" class="facebook">
-            <img src="../asset/Vector1.png" alt="" /> Sign up with facebook</a
-          >
-          <a href="#" class="twitter">
-            <img src="../asset/Vector2.png" alt="" /> Sign up with Twitter</a
-          >
+          <div class="socialmedia">
+            <p>sign up with</p>
+            <button href="#" class="google btn">
+              <img src="../asset/search1.png" alt="" /> Sign up with google
+            </button>
+            <button href="#" class="facebook btn">
+              <img src="../asset/Vector1.png" alt="" /> Sign up with facebook
+            </button>
+            <button href="#" class="twitter btn">
+              <img src="../asset/Vector2.png" alt="" /> Sign up with Twitter
+            </button>
+          </div>
+          <div class="foot">
+            <router-link to="/signin" class="sign-up-text14"
+              >Already have an account?<strong>Sign in </strong></router-link
+            >
+          </div>
         </div>
-        <div class="foot">
-          <router-link to="/signin" class="sign-up-text14"
-            >Already have an account?<strong>Sign in </strong></router-link
-          >
-        </div>
-      </div>
+      </form>
     </div>
   </div>
 </template>

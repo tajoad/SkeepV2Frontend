@@ -3,18 +3,18 @@ import { createRouter, createWebHistory } from 'vue-router'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    // {
-    //   path: '/',
-    //   name: 'LaunchPage',
-    //   component: () => import('../views/LaunchPage.vue')
-    // },
+    {
+      path: '/',
+      name: 'LaunchPage',
+      component: () => import('../views/LaunchPage.vue')
+    },
     {
       path: '/aboutme/:id',
       name: 'Aboutme',
       component: () => import('../views/Aboutme.vue'),
     },
     {
-      path: '/',
+      path: '/signup',
       name: 'Signup',
       component: () => import('../views/Signup.vue'),
     },

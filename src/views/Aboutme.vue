@@ -6,7 +6,6 @@
         <div v-for="(item, index) in Questions" :key="item.id">
             <input
               type="text"
-              class="form-control"
               :placeholder="item.Question"
               :value="content"
               @change="updateValue"

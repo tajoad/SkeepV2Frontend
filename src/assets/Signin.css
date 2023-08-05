@@ -367,26 +367,15 @@ a {
   }
   .left {
     background-color: #8b1874;
-    width: 100vw;
-    height: 20vh;
+    height: 40vh;
+    width: auto;
     color: #ffffff;
     background-image: none;
-    text-align: center;
-    align-items: center;
-    position: relative;
   }
 
   .left-size {
-    position: absolute;
-    top: 0%;
-    left: 28%;
-    transform: translate(-5%, -5%);
     padding: 20px;
-    align-items: center;
-    width: 50%;
-    margin: auto;
-    padding: auto;
-    text-align: center;
+    width: 100%;
   }
 
   .img {
@@ -394,12 +383,6 @@ a {
     max-width: 100%;
   }
 
-  /* .left-size .img{
-        padding-top: 6em;
-        height: auto;
-        width: auto;
-        max-width: 100%;
-    }  */
   .right {
     height: 100%;
     width: 100vw;

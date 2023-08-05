@@ -1,13 +1,9 @@
 <template>
-  <div class="container-fluid px-0 cont d-flex justify-content-center">
-    <div class="all-cont">
-      <div class="header"></div>
-      <div class="main">
-        <div class="d-flex justify-content-between align-items-center mb-2">
-          <h4 class="text-right">About Me</h4>
-        </div>
+  <div class="main">
+    <h1>ABOUT ME</h1>
+    <div class="inputs">
+      <div class="mini">
         <div v-for="(item, index) in Questions" :key="item.id">
-          <div class="col mb-2 input">
             <input
               type="text"
               class="form-control"
@@ -16,15 +12,13 @@
               @change="updateValue"
               :id="item.id"
             />
-          </div>
         </div>
-        <div class="col-md border-right">
-          <div class="btn-abt">
-            <button class="btn profile-button" type="button" @click="this.submitAboutMe()">
+      </div>
+      <div class="enter">
+        <button class="done" type="button" @click="this.submitAboutMe()">
               Done
             </button>
-          </div>
-        </div>
+            <button href="" class="ask">Add questions</button>
       </div>
     </div>
   </div>
@@ -47,7 +41,7 @@ export default {
     return {
       Questions: null,
       dataToSend: null,
-      userid:this.$route.params.id
+      userid: this.$route.params.id
     }
   },
   methods: {

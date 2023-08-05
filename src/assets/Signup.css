@@ -167,7 +167,7 @@ a{
 @media(max-width: 1200px){
     .left{
         background-color: #8B1874;
-        height: 100vh;
+        height: 145vh;
         width: 48vw;
         color: #FFFFFF;
         overflow: hidden;
@@ -178,55 +178,7 @@ a{
     .left-size{
         align-items: center;
         width: 100%;
-        margin: 40% auto;
-        padding: auto;
-        text-align: center;
-    }
-    .left .img{
-        height: 25%;       
-    }
-    input{
-    
-        width: 100%;
-    }
-    .submit{
-        width: 100%;
-    }
-    .socialmedia{
-        padding: 1em ;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-    /* justify-content: center; */
-        align-items: center;
-        width: 100%;
-    }
-    .google{
-        padding-inline: 4em;
-    }
-    .facebook{
-        padding-inline: 4em;
-    }
-    .twitter{
-        padding-inline: 4em;
-    }
-}
-
-@media(min-width: 1200px){
-    .left{
-        background-color: #8B1874;
-        height: 100vh;
-        width: 48vw;
-        color: #FFFFFF;
-        overflow: hidden;
-        background-size: 100%;
-        background-position: 100% 100%;
-        background-repeat: no-repeat;
-    }
-    .left-size{
-        align-items: center;
-        width: 100%;
-        margin: 20% auto;
+        margin: 28% auto;
         padding: auto;
         text-align: center;
     }
@@ -263,7 +215,7 @@ a{
 @media(max-width: 992px){
     .left{
         background-color: #8B1874;
-        height: 100vh;
+        height: 145vh;
         width: 48vw;
         color: #FFFFFF;
         overflow: hidden;
@@ -311,7 +263,7 @@ a{
 @media(max-width: 768px){
     .left{
         background-color: #8B1874;
-        height: 100vh;
+        height: 145vh;
         width: 48vw;
         color: #FFFFFF;
         overflow: hidden;
@@ -322,14 +274,15 @@ a{
     .left-size{
         align-items: center;
         width: 100%;
-        margin: 100% auto;
+        margin: 50% auto;
         padding: auto;
         text-align: center;
     }
     .left .img{
         height: 25%;       
     }
-    input{  
+    input{
+    
         width: 100%;
     }
     .submit{

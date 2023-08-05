@@ -15,7 +15,6 @@
             <div class="col mb-2 input">
               <input
                 type="text"
-                class="form-control"
                 placeholder="Email"
                 v-model="v$.user.email.$model"
                 required
@@ -30,7 +29,6 @@
             <div class="col mb-2 input">
               <input
                 type="password"
-                class="form-control"
                 placeholder="Password"
                 v-model="v$.user.password.$model"
                 required
@@ -48,7 +46,6 @@
           <div class="col mb-2 input">
             <input
               type="password"
-              class="form-control"
               placeholder="Confirm Password"
               v-model="user.confirmPassword"
               required

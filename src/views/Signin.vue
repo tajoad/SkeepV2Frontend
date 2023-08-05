@@ -15,7 +15,6 @@
             <div class="col mb-2 input">
               <input
                 type="text"
-                class="form-control"
                 placeholder="Email"
                 autocomplete="nope"
                 v-model="v$.user.email.$model"
@@ -30,7 +29,6 @@
             <div class="col mb-2 input">
               <input
                 type="password"
-                class="form-control"
                 placeholder="Password"
                 autocomplete="new-password"
                 v-model="v$.user.password.$model"

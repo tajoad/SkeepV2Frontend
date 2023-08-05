@@ -58,7 +58,9 @@
             </button>
           </div>
           <div class="foot">
-            <router-link to="/"> Don't have an account?<strong> Sign up </strong></router-link>
+            <router-link to="/signup">
+              Don't have an account?<strong> Sign up </strong></router-link
+            >
           </div>
           <div class="foot">
             <router-link to="/signin"> forgot password?<strong> Click me</strong></router-link>

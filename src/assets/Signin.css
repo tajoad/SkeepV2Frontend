@@ -25,25 +25,19 @@ body {
   background-size: 100%;
   background-position: 100% 100%;
   background-repeat: no-repeat;
-  position: relative;
 }
 
 .left-size {
-  position: absolute;
-  top: 15%;
-  left: 15%;
-  transform: translate(-15%, -15%);
-  padding: 20px;
   align-items: center;
   width: 100%;
-  margin: auto;
-  padding: auto;
+  margin: 10% auto;
   text-align: center;
+  padding: 0px 50px;
 }
 
 .img {
   height: auto;
-  max-width: 50%;
+  max-width: 100%;
 }
 /* .left .img{
     padding-left: 6.5em;
@@ -221,7 +215,7 @@ a {
   }
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   .left {
     background-color: #8b1874;
     height: 100vh;
@@ -235,8 +229,9 @@ a {
   .left-size {
     align-items: center;
     width: 100%;
-    padding: auto;
+    margin: 5% auto;
     text-align: center;
+    padding: 0px 50px;
   }
   .left .img {
     height: auto;
@@ -367,15 +362,18 @@ a {
   }
   .left {
     background-color: #8b1874;
-    height: 30vh;
-    width: auto;
+    height: 100%;
+    width: 100vw;
     color: #ffffff;
     background-image: none;
   }
 
   .left-size {
-    padding: 20px;
-    width: 100%;
+    align-items: center;
+    width: 50%;
+    margin: 1% auto;
+    padding: 10px;
+    text-align: center;
   }
 
   .img {
@@ -383,6 +381,19 @@ a {
     max-width: 100%;
   }
 
+  .left-size {
+    align-items: center;
+    width: 100%;
+    height: auto;
+    width: 70%;
+    text-align: center;
+  }
+  /* .left-size .img{
+        padding-top: 6em;
+        height: auto;
+        width: auto;
+        max-width: 100%;
+    }  */
   .right {
     height: 100%;
     width: 100vw;

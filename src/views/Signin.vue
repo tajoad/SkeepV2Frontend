@@ -49,7 +49,6 @@
             class="btn profile-button form-submit submit"
             type="button"
             @click="submitSignIn()"
-            :disabled="v$.user.$invalid"
           >
             Sign In
           </button>

@@ -2,16 +2,16 @@
   <div class="main">
     <div class="left">
       <div class="left-size">
-      <img src="../images/skeep22.png" alt="" class="img" />
-      <p>Start the conversation</p>
-    </div>
+        <img src="../images/skeep22.png" alt="" class="img" />
+        <p>Start the conversation</p>
+      </div>
     </div>
     <div class="right">
       <div class="inner-right">
-          <h2>Sign up</h2>
-          <div class="inptags">
-            <div class="align-items-center"></div>
-             <div class="form-setup">
+        <h2>Sign up</h2>
+        <div class="inptags">
+          <div class="align-items-center"></div>
+          <div class="form-setup">
             <div class="col mb-2 input">
               <input
                 type="text"
@@ -54,34 +54,29 @@
               required
             />
           </div>
-            <button
-              class="submit"
-              type="button"
-              @click="submitSignUp()"
-              :disabled="v$.user.$invalid"
-            >
-              Create account
-            </button>
-          </div>
-
-          <div class="socialmedia">
-            <p>sign up with</p>
-            <button href="#" class="google btn">
-              <img src="../asset/search1.png" alt="" /> Sign up with google
-            </button>
-            <button href="#" class="facebook btn">
-              <img src="../asset/Vector1.png" alt="" /> Sign up with facebook
-            </button>
-            <button href="#" class="twitter btn">
-              <img src="../asset/Vector2.png" alt="" /> Sign up with Twitter
-            </button>
-          </div>
-          <div class="foot">
-            <router-link to="/signin" class="sign-up-text14"
-              >Already have an account?<strong>Sign in </strong></router-link
-            >
-          </div>
+          <button class="submit" type="button" @click="submitSignUp()" :disabled="v$.user.$invalid">
+            Create account
+          </button>
         </div>
+
+        <div class="socialmedia">
+          <p>sign up with</p>
+          <button href="#" class="google btn">
+            <img src="../asset/search1.png" alt="" /> Sign up with google
+          </button>
+          <button href="#" class="facebook btn">
+            <img src="../asset/Vector1.png" alt="" /> Sign up with facebook
+          </button>
+          <button href="#" class="twitter btn">
+            <img src="../asset/Vector2.png" alt="" /> Sign up with Twitter
+          </button>
+        </div>
+        <div class="foot">
+          <router-link to="/signin" class="sign-up-text14"
+            >Already have an account?<strong>Sign in </strong></router-link
+          >
+        </div>
+      </div>
     </div>
   </div>
 </template>

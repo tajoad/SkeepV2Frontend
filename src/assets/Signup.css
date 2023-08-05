@@ -17,7 +17,7 @@ body{
 
 .left{
     background-color: #8B1874;
-    height: 140vh;
+    height: 142vh;
     width: 50%;
     color: #FFFFFF;
     background-image: url(../images/white.png);
@@ -167,7 +167,7 @@ a{
 @media(max-width: 1200px){
     .left{
         background-color: #8B1874;
-        height: 140vh;
+        height: 145vh;
         width: 48vw;
         color: #FFFFFF;
         overflow: hidden;
@@ -211,7 +211,104 @@ a{
         padding-inline: 4em;
     }
 }
-@media(max-width: 700px){
+
+@media(max-width: 992px){
+    .left{
+        background-color: #8B1874;
+        height: 145vh;
+        width: 48vw;
+        color: #FFFFFF;
+        overflow: hidden;
+        background-size: 100%;
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .left-size{
+        align-items: center;
+        width: 100%;
+        margin: 50% auto;
+        padding: auto;
+        text-align: center;
+    }
+    .left .img{
+        height: 25%;       
+    }
+    input{
+    
+        width: 100%;
+    }
+    .submit{
+        width: 100%;
+    }
+    .socialmedia{
+        padding: 1em ;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    /* justify-content: center; */
+        align-items: center;
+        width: 100%;
+    }
+    .google{
+        padding-inline: 4em;
+    }
+    .facebook{
+        padding-inline: 4em;
+    }
+    .twitter{
+        padding-inline: 4em;
+    }
+}
+
+@media(max-width: 768px){
+    .left{
+        background-color: #8B1874;
+        height: 145vh;
+        width: 48vw;
+        color: #FFFFFF;
+        overflow: hidden;
+        background-size: 100%;
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .left-size{
+        align-items: center;
+        width: 100%;
+        margin: 50% auto;
+        padding: auto;
+        text-align: center;
+    }
+    .left .img{
+        height: 25%;       
+    }
+    input{
+    
+        width: 100%;
+    }
+    .submit{
+        width: 100%;
+    }
+    .socialmedia{
+        padding: 1em ;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    /* justify-content: center; */
+        align-items: center;
+        width: 100%;
+    }
+    .google{
+        padding-inline: 4em;
+    }
+    .facebook{
+        padding-inline: 4em;
+    }
+    .twitter{
+        padding-inline: 4em;
+    }
+}
+
+@media(max-width: 600px){
     body{
         font-family: sora;
         font-size: 16px;
@@ -235,7 +332,6 @@ a{
 
     .img{
         height: auto;
-        width: 50%;
         max-width: 100%;
     }
 
@@ -243,7 +339,7 @@ a{
         align-items: center;
         width: 100%;
         height: auto;
-        width: 100%;
+        width: 70%;
         text-align: center;
     }
     /* .left-size .img{

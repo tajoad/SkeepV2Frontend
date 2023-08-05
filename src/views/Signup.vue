@@ -1,12 +1,13 @@
 <template>
   <div class="main">
     <div class="left">
+      <div class="left-size">
       <img src="../images/skeep22.png" alt="" class="img" />
       <p>Start the conversation</p>
-      <div class="background"></div>
+    </div>
     </div>
     <div class="right">
-        <div class="inner-right">
+      <div class="inner-right">
           <h2>Sign up</h2>
           <div class="inptags">
             <div class="align-items-center"></div>

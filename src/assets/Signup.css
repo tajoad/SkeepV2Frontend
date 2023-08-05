@@ -11,23 +11,40 @@ body{
 }
 .main{
     display: flex;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 .left{
     background-color: #8B1874;
-    height: 100%;
-    width: 50vw;
+    height: 140vh;
+    width: 50%;
     color: #FFFFFF;
-    
+    background-image: url(../images/white.png);
+    overflow: hidden;
+    background-size: 100%;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
 }
-.left .img{
+
+.left-size{
+    align-items: center;
+    width: 100%;
+    margin: 22% auto;
+    text-align: center;
+    padding: 0px 50px;
+}
+
+.img{
+    height: auto;
+    max-width: 100%;
+}
+/* .left .img{
     padding-left: 6.5em;
     padding-top: 6em;
-    /* height: 35%; */
+    height: 35%; 
     
-}
+} */
 .left p{
     font-size: 11.4px;
     font-weight: 300;
@@ -35,16 +52,16 @@ body{
     align-items: center;
     justify-content: center;
 }
-.background{
+/* .background{
     background-image: url(../images/white.png);
     margin-top: 5%;
     height: 100%;
     overflow: hidden;
     background-repeat: no-repeat;
-}
+} */
 .right{
     height: 100%;
-    width: 50vw;
+    width: 50%;
 }
 .inner-right{
     padding: 1% 12%;
@@ -145,20 +162,28 @@ a{
     font-weight: 300;
     text-align: center;
     width: 100%;
-    padding-top: 1.5em;
+    padding: 1.5em;
 }
 @media(max-width: 1200px){
     .left{
         background-color: #8B1874;
-        height: 100vh;
+        height: 140vh;
         width: 48vw;
         color: #FFFFFF;
-        
+        overflow: hidden;
+        background-size: 100%;
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .left-size{
+        align-items: center;
+        width: 100%;
+        margin: 28% auto;
+        padding: auto;
+        text-align: center;
     }
     .left .img{
-        padding-top: 6em;
-        height: 25%;
-        
+        height: 25%;       
     }
     input{
     
@@ -194,16 +219,39 @@ a{
     }
     .left{
         background-color: #8B1874;
-        height: 60vh;
+        height: 100%;
         width: 100vw;
         color: #FFFFFF;
-        
+        background-image: none;
     }
-    .left .img{
+
+    .left-size{
+        align-items: center;
+        width: 50%;     
+        margin: 1% auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .img{
+        height: auto;
+        width: 50%;
+        max-width: 100%;
+    }
+
+    .left-size{
+        align-items: center;
+        width: 100%;
+        height: auto;
+        width: 70%;
+        text-align: center;
+    }
+    /* .left-size .img{
         padding-top: 6em;
-        height: 40vw;
-        
-    }
+        height: auto;
+        width: auto;
+        max-width: 100%;
+    }  */
     .right{
         height: 100%;
         width: 100vw;

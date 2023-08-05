@@ -120,7 +120,7 @@ a{
         height: 60vh;
         width: 100vw;
         color: #FFFFFF;
-        
+        background-image: none;
     }
     .inner-right{
       width: 100vw;

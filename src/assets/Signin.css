@@ -391,7 +391,7 @@ a {
 
   .img {
     height: auto;
-    max-width: 65%;
+    max-width: 100%;
   }
 
   /* .left-size .img{

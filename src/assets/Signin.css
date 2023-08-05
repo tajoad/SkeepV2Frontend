@@ -86,23 +86,20 @@ a{
     font-size: 12.06px;
     font-weight: 300;
     text-align: center;
-    padding-top: 1.5em;
+    padding: 1em;
 }
 @media(max-width: 1200px){
     .left{
         background-color: #8B1874;
         height: 100vh;
         width: 48vw;
-        color: #FFFFFF;
-        
+        color: #FFFFFF;       
     }
     .inner-right{
       width: 50vw;
     }
     .left .img{
-        padding-top: 6em;
-        height: 25%;
-        
+        height: 25%;       
     }
     input{
     
@@ -129,9 +126,7 @@ a{
       width: 100vw;
     }
     .left .img{
-        padding-top: 6em;
-        height: 40vw;
-        
+        height: 40vw;        
     }
     input{    
         width: 100%;

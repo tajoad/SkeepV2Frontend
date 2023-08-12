@@ -80,7 +80,7 @@
 
 <script>
 import SkipAPI from '../../api/resources/SkipAPI'
-const url_path = 'signup'
+const url_path = 'api/skeepuser'
 import VueDatePicker from '@vuepic/vue-datepicker'
 import '@vuepic/vue-datepicker/dist/main.css'
 import useVuelidate from '@vuelidate/core'
@@ -146,6 +146,8 @@ export default {
       const data = await SkipAPI.store(url_path, jsonData)
 
       const getData = JSON.parse(data)
+
+      console.log(getData)
 
       if (getData.responseCode === 0) {
         this.$toast.error(getData.responseMsg, {

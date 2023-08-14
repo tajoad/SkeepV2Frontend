@@ -10,10 +10,11 @@ body {
 }
 .main {
   padding: 0% 10%;
+  width: 80%;
 }
 .main h1 {
-  font-family: 'Athiti';
-  font-size: 8em;
+  font-family: 'Aeonik';
+  font-size: 6em;
   text-align: center;
   font-weight: 200;
   color: #8b1874;
@@ -28,7 +29,7 @@ input {
   border-radius: 4px;
   cursor: pointer;
   width: 100%;
-  margin: 7px 0px;
+  margin: 4px 0px;
   font-size: 12.5px;
 }
 
@@ -41,7 +42,7 @@ a {
   text-decoration: none;
 }
 .enter {
-  margin: 2em;
+  align-items: center;
   text-align: center;
 }
 .done {

@@ -4,7 +4,7 @@
   background-color: #293462;
   background-size: cover;
   width: 50vw;
-  height: 136vh;
+  height: auto;
 }
 .main-img {
   margin: auto;
@@ -45,6 +45,7 @@ input {
   cursor: pointer;
   border-radius: 6.118px;
   background: #fff;
+  text-indent:20px;
 }
 
 input::placeholder {
@@ -54,7 +55,6 @@ input::placeholder {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
-  padding-left: 28px;
 }
 .input-errors {
   color: rgba(193, 9, 9, 0.799);
@@ -109,7 +109,7 @@ input::placeholder {
   font-size: 10%;
   font-weight: 400;
   padding-block: 10px;
-  padding-inline: 4em;
+  padding: 7px 15%;
   border-radius: 8px;
   width: 100%;
   text-align: center;
@@ -131,7 +131,7 @@ input::placeholder {
   margin-block: 8px;
   padding-block: 10px;
   width: 100%;
-  padding-inline: 4em;
+  padding: 7px 15%;
   border-radius: 8px;
   box-shadow: 1px 4px 2px rgba(0, 0, 0, 0.25);
   color: #fff;
@@ -148,7 +148,7 @@ input::placeholder {
   width: 100%;
   color: #fff;
   padding-block: 10px;
-  padding-inline: 4em;
+  padding: 7px 15%;
   border-radius: 8px;
   text-align: center;
   box-shadow: 1px 4px 2px rgba(0, 0, 0, 0.25);
@@ -180,12 +180,22 @@ input::placeholder {
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media (min-width: 993px) and (max-width: 1200px){
   .left {
     width: 50vw;
     height: auto;
   }
+  .facebook{
+    padding: 7px auto;
+  }
 
+  .twitter{
+    padding: 7px auto;
+  }
+
+  .google{
+    padding: 7px auto;
+  }
   .foot {
     font-size: auto;
   }
@@ -195,7 +205,7 @@ input::placeholder {
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media (min-width: 769px) and (max-width: 992px) {
   .left {
     width: 50vw;
     height: auto;
@@ -204,7 +214,20 @@ input::placeholder {
   .right {
     height: auto;
   }
+  .facebook{
+    padding: 7px 7%;
+    font-size: 12px;
+  }
 
+  .twitter{
+    padding: 7px 7%;
+    font-size: 12px;
+  }
+
+  .google{
+    padding: 7px 7%;
+    font-size: 12px;
+  }
   .google img {
     height: auto;
   }
@@ -226,26 +249,41 @@ input::placeholder {
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media (min-width: 601px) and (max-width: 768px) {
   .left {
     width: 50vw;
+    height: auto;
   }
 
   .right {
     width: 50vw;
+  }
+
+  .facebook{
+    padding: 7px auto;
+    font-size: 10px;
+  }
+
+  .twitter{
+    padding: 7px auto;
+    font-size: 10px;
+  }
+
+  .google{
+    padding: 7px auto;
+    font-size: 10px;
   }
 
   .google img {
-    height: auto;
+    height: 20px;
   }
 
   .facebook img {
-    height: auto;
+    height: 20px;
   }
   .twitter img {
-    height: auto;
+    height: 20px;
   }
-
   .foot {
     font-size: auto;
   }
@@ -255,28 +293,6 @@ input::placeholder {
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .left {
-    width: 50vw;
-    height: auto;
-  }
-
-  .right {
-    width: 50vw;
-  }
-  .foot {
-    font-size: auto;
-  }
-
-  .foot strong {
-    font-size: auto;
-  }
-
-  .foot-btn {
-    font-size: auto;
-  }
-}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -300,6 +316,15 @@ input::placeholder {
   .main-img {
     height: 80%;
     width: 100%;
+  }
+  .google{
+    padding: 7px 12%;
+  }
+  .facebook{
+    padding: 7px 12%;
+  }
+  .twitter{
+    padding: 7px 12%;
   }
   .right {
     width: 100vw;

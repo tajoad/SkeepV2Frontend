@@ -84,7 +84,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   border-radius: 24.473px;
-  opacity: 0.78000001192092896;
+  opacity: 0.3;
   background: #cfcfcf;
   padding: 8% 5%;
   margin-top: 10px;
@@ -120,7 +120,7 @@ input::placeholder {
   font: 200 15.26px 'Roboto', sans-serif;
 }
 
-.google img{
+.google img {
   height: 10%;
 }
 .facebook {
@@ -185,7 +185,6 @@ input::placeholder {
     width: 50vw;
     height: auto;
   }
-
 
   .foot {
     font-size: auto;
@@ -300,7 +299,7 @@ input::placeholder {
   }
   .main-img {
     height: 80%;
-    width: 50%;
+    width: 80%;
   }
   .right {
     width: 100vw;

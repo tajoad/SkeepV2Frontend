@@ -1,15 +1,10 @@
 <template>
   <div class="main">
     <h1>ABOUT ME</h1>
-    <div class="row m-3">
-      <div class="col-md px-3">
-        <div v-for="(item, index) in Questions" :key="item.id">
+    <div class="inputs">
+      <div class="mini" v-for="(item, index) in Questions" :key="item.id">
+        <div v-if="item.Q_id == '1'">
           <input
-            v-if="
-              item._id !== '64d9466aeecf57568f8f4285' &&
-              item._id !== '64d94675eecf57568f8f4287' &&
-              item._id !== '64d9467feecf57568f8f4289'
-            "
             type="text"
             :placeholder="item.Question"
             :value="content"
@@ -18,30 +13,22 @@
           />
         </div>
       </div>
-      <div class="col-md px-3">
-        <div v-for="(item, index) in Questions" :key="item.id">
-          <input
-            v-if="
-              item._id === '64d9466aeecf57568f8f4285' ||
-              item._id === '64d94675eecf57568f8f4287' ||
-              item._id === '64d9467feecf57568f8f4289'
-            "
-            type="text"
-            :placeholder="item.Question"
-            :value="content"
-            @change="updateValue"
-            :id="item.id"
-          />
-        </div>
+      <div class="mini">
+        <input type="text" placeholder="Date of birth" />
+        <input type="text" placeholder="Favourite  Musician" />
       </div>
-      <div class="row align-items-center mx-5 mt-4">
-        <div class="col-md">
-          <button class="btn done" type="button" @click="this.submitAboutMe()">Done</button>
-        </div>
-        <div class="col-md">
-          <button href="" class="btn ask">Add questions</button>
-        </div>
+      <input type="text" placeholder="Country of residence" />
+      <div class="mini2">
+        <input type="text" placeholder="Gender" />
+        <input type="text" placeholder="height" />
       </div>
+      <input type="text" placeholder="Occupation" />
+      <input type="text" placeholder="Nationality" />
+      <input type="text" placeholder="Hobbies" />
+    </div>
+    <div class="enter">
+      <a href="" class="done">Done</a>
+      <a href="" class="ask">Add questions</a>
     </div>
   </div>
 </template>

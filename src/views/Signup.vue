@@ -1,77 +1,61 @@
 <template>
-  <div class="main">
-    <div class="left">
-      <div class="left-size">
-        <img src="../images/skeep22.png" alt="" class="img" />
-        <p>Start the conversation</p>
+  <div class="container-fluid">
+    <div class="row min-vh-100 min-vw-100 vw-100 vh-100 top-main">
+      <div class="col-6 left">
+        <div class="img-height">
+          <img src="../images/skeepw.png" alt="" class="main-img" />
+        </div>
       </div>
-    </div>
-    <div class="right">
-      <div class="inner-right">
+      <div class="col-6 right">
         <h2>Sign up</h2>
         <div class="inptags">
-          <div class="align-items-center"></div>
-          <div class="form-setup">
-            <div class="col mb-2 input">
-              <input
-                type="text"
-                placeholder="Email"
-                v-model="v$.user.email.$model"
-                required
-                autocomplete="new-password"
-              />
-            </div>
-            <div class="input-errors" v-for="(error, index) of v$.user.email.$errors" :key="index">
-              <div class="error-msg">{{ error.$message }}</div>
-            </div>
+          <input
+            type="text"
+            placeholder="Email"
+            v-model="v$.user.email.$model"
+            required
+            autocomplete="new-password"
+          />
+          <div class="input-errors" v-for="(error, index) of v$.user.email.$errors" :key="index">
+            <div class="error-msg">{{ error.$message }}</div>
           </div>
-          <div class="form-setup">
-            <div class="col mb-2 input">
-              <input
-                type="password"
-                placeholder="Password"
-                v-model="v$.user.password.$model"
-                required
-                autocomplete="new-password"
-              />
-            </div>
-            <div
-              class="input-errors"
-              v-for="(error, index) of v$.user.password.$errors"
-              :key="index"
-            >
-              <div class="error-msg">{{ error.$message }}</div>
-            </div>
+          <input
+            type="password"
+            placeholder="Password"
+            v-model="v$.user.password.$model"
+            required
+            autocomplete="new-password"
+          />
+          <div class="input-errors" v-for="(error, index) of v$.user.password.$errors" :key="index">
+            <div class="error-msg">{{ error.$message }}</div>
           </div>
-          <div class="col mb-2 input">
-            <input
-              type="password"
-              placeholder="Confirm Password"
-              v-model="user.confirmPassword"
-              required
-            />
-          </div>
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            v-model="user.confirmPassword"
+            required
+          />
           <button class="submit" type="button" @click="submitSignUp()" :disabled="v$.user.$invalid">
             Create account
           </button>
         </div>
-
-        <div class="socialmedia">
-          <p>sign up with</p>
-          <button href="#" class="google btn">
-            <img src="../asset/search1.png" alt="" /> Sign up with google
+        <div class="social-media">
+          <h2>Sign up with</h2>
+          <div class="inner-social-media">
+            <button href="#" class="google btn">
+            <img src="../images/search.png" alt="" /> Sign up with google
           </button>
           <button href="#" class="facebook btn">
-            <img src="../asset/Vector1.png" alt="" /> Sign up with facebook
+            <img src="../images/basil_facebook-solid.svg" alt="" /> Sign up with facebook
           </button>
           <button href="#" class="twitter btn">
-            <img src="../asset/Vector2.png" alt="" /> Sign up with Twitter
+            <img src="../images/mdi_twitter.svg" alt="" /> Sign up with Twitter
           </button>
+          </div>
         </div>
         <div class="foot">
-          <router-link to="/signin" class="sign-up-text14"
-            >Already have an account?<strong>Sign in </strong></router-link
-          >
+          <router-link to="/signin" class="btn foot-btn"
+            >Already have an account?<strong>Sign in </strong></router-link>
         </div>
       </div>
     </div>

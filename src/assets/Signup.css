@@ -299,10 +299,14 @@ input::placeholder {
   }
   .main-img {
     height: 80%;
-    width: 80%;
+    width: 100%;
   }
   .right {
     width: 100vw;
+  }
+
+  .right h2 {
+    padding-top: 1em;
   }
 
   .foot {

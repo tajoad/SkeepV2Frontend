@@ -318,13 +318,26 @@ input::placeholder {
     width: 100%;
   }
   .google{
-    padding: 7px 12%;
+    padding: 7px 4%;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
   .facebook{
-    padding: 7px 12%;
+    padding: 7px 4%;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .twitter{
-    padding: 7px 12%;
+    padding: 7px 4%;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .right {
     width: 100vw;

@@ -4,7 +4,7 @@
   background-color: #293462;
   background-size: cover;
   width: 50vw;
-  height: 160vh;
+  height: auto;
 }
 .main-img {
   margin: auto;
@@ -48,6 +48,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+  height: 300px;
 }
 
 input {
@@ -73,7 +74,7 @@ input::placeholder {
 .input-errors {
   color: rgba(193, 9, 9, 0.799);
   text-align: center;
-  display: inline;
+  display: inline-block;
   width: 100%;
   font-size: small;
 }
@@ -196,6 +197,31 @@ input::placeholder {
   font-size: 12.761px;
   font-style: normal;
   font-weight: 700;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .left {
+    width: 50vw;
+    height: auto;
+  }
+  .facebook {
+    padding: 7px auto;
+  }
+
+  .twitter {
+    padding: 7px auto;
+  }
+
+  .google {
+    padding: 7px auto;
+  }
+  .foot {
+    font-size: auto;
+  }
+  .foot-btn {
+    font-size: auto;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */

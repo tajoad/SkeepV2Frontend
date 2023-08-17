@@ -37,6 +37,11 @@ const router = createRouter({
       path: '/morequestions',
       name: 'MoreQuestions',
       component: () => import('../views/MoreQuestions.vue'),
+    },
+    {
+      path: '/forgotpassword',
+      name: 'ForgotPassword',
+      component: () => import('../views/ForgotPassword.vue'),
     }
   ]
 })

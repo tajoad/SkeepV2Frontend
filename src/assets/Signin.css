@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,400&family=Roboto:wght@300;400;500;700&family=Sora:wght@400;600;700&display=swap');
 .main {
-  padding: 2%;
+  padding: 2% 5%;
   margin-bottom: 10%;
 }
 .top {
@@ -168,5 +168,10 @@ input::placeholder {
   }
   .inner-right {
     padding: 1% 0%;
+  }
+  .foot{
+    align-items: center;
+    text-align: center;
+    margin-top: 0px;
   }
 }

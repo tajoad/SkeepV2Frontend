@@ -55,14 +55,14 @@
               </button>
             </div>
             <div class="foot">
-              <div>
+              <div class="foot-txt">
                 Don’t have an account?
                 <router-link to="/signup" class="btn foot-btn"
                   ><strong>Sign in </strong></router-link
                 >
               </div>
-              <div>
-                <router-link to="/signup" class="btn foot-btn forgot-pwd"
+              <div class="foot-txt">
+                <router-link to="/forgotpassword" class="btn foot-btn forgot-pwd"
                   >Forgot password?</router-link
                 >
               </div>
@@ -91,7 +91,7 @@ export function validName(name) {
 }
 
 export default {
-  name: 'api/skeepuser',
+  name: 'Signin',
   props: {},
   components: { VueDatePicker },
   setup() {

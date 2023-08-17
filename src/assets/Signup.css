@@ -4,7 +4,7 @@
   background-color: #293462;
   background-size: cover;
   width: 50vw;
-  height: auto;
+  height: 150vh;
 }
 .main-img {
   margin: auto;
@@ -19,10 +19,10 @@
 }
 .right {
   width: 50vw;
-  padding: 5% 8%;
+  height: auto;
 }
 
-.right h2 {
+.inner-right h2 {
   color: #4d455d;
   font-family: 'Roboto', sans-serif;
   font-size: 32.43px;
@@ -30,22 +30,36 @@
   font-weight: 700;
   line-height: normal;
   padding-bottom: 1em;
+  width: 100%;
 }
 
-.right .inptags {
+.inner-right {
+  padding: 1% 12%;
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+  position: relative;
+}
+.inner-right h2 {
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+.inner-right .inptags {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
 }
+
 input {
   padding: 8px 7px;
   margin-bottom: 5px;
   border: 2.447px solid #ddd;
   border-radius: 4px;
   cursor: pointer;
+  width: 100%;
   border-radius: 6.118px;
   background: #fff;
-  text-indent:20px;
+  text-indent: 20px;
 }
 
 input::placeholder {
@@ -84,7 +98,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   border-radius: 24.473px;
-  opacity: 0.75000001192092896;
+  opacity: 0.79000001192092896;
   background: #cfcfcf;
   padding: 8% 5%;
   margin-top: 10px;
@@ -180,20 +194,20 @@ input::placeholder {
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media (min-width: 993px) and (max-width: 1200px){
+@media (min-width: 993px) and (max-width: 1200px) {
   .left {
     width: 50vw;
     height: auto;
   }
-  .facebook{
+  .facebook {
     padding: 7px auto;
   }
 
-  .twitter{
+  .twitter {
     padding: 7px auto;
   }
 
-  .google{
+  .google {
     padding: 7px auto;
   }
   .foot {
@@ -214,17 +228,17 @@ input::placeholder {
   .right {
     height: auto;
   }
-  .facebook{
+  .facebook {
     padding: 7px 7%;
     font-size: 12px;
   }
 
-  .twitter{
+  .twitter {
     padding: 7px 7%;
     font-size: 12px;
   }
 
-  .google{
+  .google {
     padding: 7px 7%;
     font-size: 12px;
   }
@@ -259,17 +273,17 @@ input::placeholder {
     width: 50vw;
   }
 
-  .facebook{
+  .facebook {
     padding: 7px auto;
     font-size: 10px;
   }
 
-  .twitter{
+  .twitter {
     padding: 7px auto;
     font-size: 10px;
   }
 
-  .google{
+  .google {
     padding: 7px auto;
     font-size: 10px;
   }
@@ -292,7 +306,6 @@ input::placeholder {
     font-size: auto;
   }
 }
-
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -317,7 +330,7 @@ input::placeholder {
     height: 80%;
     width: 100%;
   }
-  .google{
+  .google {
     padding: 7px 4%;
     font-size: small;
     display: flex;
@@ -325,14 +338,14 @@ input::placeholder {
     align-items: center;
   }
 
-  .facebook{
+  .facebook {
     padding: 7px 4%;
     font-size: small;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .twitter{
+  .twitter {
     padding: 7px 4%;
     font-size: small;
     display: flex;

@@ -7,55 +7,82 @@
         </div>
       </div>
       <div class="col-6 right">
-        <h2>Sign up</h2>
-        <div class="inptags">
-          <input
-            type="text"
-            placeholder="Email"
-            v-model="v$.user.email.$model"
-            required
-            autocomplete="new-password"
-          />
-          <div class="input-errors" v-for="(error, index) of v$.user.email.$errors" :key="index">
-            <div class="error-msg">{{ error.$message }}</div>
+        <div class="inner-right">
+          <h2>Sign up</h2>
+          <div class="inptags">
+            <div class="align-items-center"></div>
+            <div class="form-setup">
+              <div class="col mb-2 input">
+                <input
+                  type="text"
+                  placeholder="Email"
+                  v-model="v$.user.email.$model"
+                  required
+                  autocomplete="new-password"
+                />
+              </div>
+              <div
+                class="input-errors"
+                v-for="(error, index) of v$.user.email.$errors"
+                :key="index"
+              >
+                <div class="error-msg">{{ error.$message }}</div>
+              </div>
+            </div>
+            <div class="form-setup">
+              <div class="col mb-2 input">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  v-model="v$.user.password.$model"
+                  required
+                  autocomplete="new-password"
+                />
+              </div>
+              <div
+                class="input-errors"
+                v-for="(error, index) of v$.user.password.$errors"
+                :key="index"
+              >
+                <div class="error-msg">{{ error.$message }}</div>
+              </div>
+            </div>
+            <div class="col mb-2 input">
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                v-model="user.confirmPassword"
+                required
+              />
+            </div>
+            <button
+              class="submit"
+              type="button"
+              @click="submitSignUp()"
+              :disabled="v$.user.$invalid"
+            >
+              Create account
+            </button>
           </div>
-          <input
-            type="password"
-            placeholder="Password"
-            v-model="v$.user.password.$model"
-            required
-            autocomplete="new-password"
-          />
-          <div class="input-errors" v-for="(error, index) of v$.user.password.$errors" :key="index">
-            <div class="error-msg">{{ error.$message }}</div>
+          <div class="social-media">
+            <h2>Sign up with</h2>
+            <div class="inner-social-media">
+              <button href="#" class="google btn">
+                <img src="../images/search.png" alt="" /> Sign up with google
+              </button>
+              <button href="#" class="facebook btn">
+                <img src="../images/basil_facebook-solid.svg" alt="" /> Sign up with facebook
+              </button>
+              <button href="#" class="twitter btn">
+                <img src="../images/mdi_twitter.svg" alt="" /> Sign up with Twitter
+              </button>
+            </div>
           </div>
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            v-model="user.confirmPassword"
-            required
-          />
-          <button class="submit" type="button" @click="submitSignUp()" :disabled="v$.user.$invalid">
-            Create account
-          </button>
-        </div>
-        <div class="social-media">
-          <h2>Sign up with</h2>
-          <div class="inner-social-media">
-            <button href="#" class="google btn">
-            <img src="../images/search.png" alt="" /> Sign up with google
-          </button>
-          <button href="#" class="facebook btn">
-            <img src="../images/basil_facebook-solid.svg" alt="" /> Sign up with facebook
-          </button>
-          <button href="#" class="twitter btn">
-            <img src="../images/mdi_twitter.svg" alt="" /> Sign up with Twitter
-          </button>
+          <div class="foot">
+            <router-link to="/signin" class="btn foot-btn"
+              >Already have an account?<strong>Sign in </strong></router-link
+            >
           </div>
-        </div>
-        <div class="foot">
-          <router-link to="/signin" class="btn foot-btn"
-            >Already have an account?<strong>Sign in </strong></router-link>
         </div>
       </div>
     </div>
@@ -64,7 +91,7 @@
 
 <script>
 import SkipAPI from '../../api/resources/SkipAPI'
-const url_path = 'api/skeepuser'
+const url_path = 'api/createskeepuser'
 import VueDatePicker from '@vuepic/vue-datepicker'
 import '@vuepic/vue-datepicker/dist/main.css'
 import useVuelidate from '@vuelidate/core'
@@ -126,6 +153,8 @@ export default {
     },
     submitSignUp: async function () {
       const jsonData = JSON.stringify(this.user)
+
+      console.log(jsonData)
 
       const data = await SkipAPI.store(url_path, jsonData)
 

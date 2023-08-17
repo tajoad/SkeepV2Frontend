@@ -10,7 +10,6 @@
         <div class="inner-right">
           <h2>Sign up</h2>
           <div class="inptags">
-            <div class="align-items-center"></div>
             <div class="form-setup">
               <div class="col mb-2 input">
                 <input

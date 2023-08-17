@@ -135,7 +135,13 @@ input::placeholder {
 }
 
 .google img {
-  height: 10%;
+  padding-right: 8px;
+}
+.facebook img {
+  padding-right: 8px;
+}
+.twitter img {
+  padding-right: 8px;
 }
 .facebook {
   border: 1px solid #3d6ad6;
@@ -265,7 +271,7 @@ input::placeholder {
 @media (min-width: 601px) and (max-width: 768px) {
   .left {
     width: 50vw;
-    height: 15vh;
+    height: auto;
   }
 
   .right {
@@ -306,10 +312,6 @@ input::placeholder {
   }
 }
 
-.btn:hover {
-  color: #fff !important;
-  text-decoration: none;
-}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .top-main {
@@ -335,6 +337,7 @@ input::placeholder {
   }
   .google {
     padding: 7px 4%;
+    margin-bottom: 15px;
     font-size: small;
     display: flex;
     justify-content: center;
@@ -343,6 +346,7 @@ input::placeholder {
 
   .facebook {
     padding: 7px 4%;
+    margin-bottom: 15px;
     font-size: small;
     display: flex;
     justify-content: center;
@@ -350,6 +354,7 @@ input::placeholder {
   }
   .twitter {
     padding: 7px 4%;
+    margin-bottom: 15px;
     font-size: small;
     display: flex;
     justify-content: center;

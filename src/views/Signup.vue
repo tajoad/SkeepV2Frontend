@@ -79,8 +79,8 @@
             </div>
           </div>
           <div class="foot">
-            <router-link to="/signin" class="btn foot-btn"
-              >Already have an account?<strong>Sign in </strong></router-link
+            Already have an account?<router-link to="/signin" class="btn foot-btn"
+              ><strong>Sign in </strong></router-link
             >
           </div>
         </div>

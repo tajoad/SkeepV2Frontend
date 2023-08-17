@@ -1,61 +1,69 @@
 <template>
-  <div class="main">
-    <div class="left">
-      <div class="left-size">
-        <img src="../asset/skeep1.png" alt="" class="img" />
-        <p>Start the conversation</p>
+  <div class="container-fluid">
+    <div class="row row-cols-1 main">
+      <div class="col top">
+        <img src="../images/skeep--- 1.png" alt="" />
       </div>
-    </div>
-    <div class="right">
-      <div class="inner-right">
-        <h2>Sign In</h2>
-        <div class="inptags">
-          <div class="align-items-center"></div>
-          <div class="form-setup">
-            <div class="col mb-2 input">
-              <input
-                type="text"
-                placeholder="Email"
-                autocomplete="nope"
-                v-model="v$.user.email.$model"
-                required
-              />
+      <div class="col">
+        <div class="inner-right">
+          <div class="inptags">
+            <div class="align-items-center"></div>
+            <div class="form-setup">
+              <div class="col mb-2 input">
+                <input
+                  type="text"
+                  placeholder="Email"
+                  v-model="v$.user.email.$model"
+                  required
+                  autocomplete="new-password"
+                />
+              </div>
+              <div
+                class="input-errors"
+                v-for="(error, index) of v$.user.email.$errors"
+                :key="index"
+              >
+                <div class="error-msg">{{ error.$message }}</div>
+              </div>
             </div>
-            <div class="input-errors" v-for="(error, index) of v$.user.email.$errors" :key="index">
-              <div class="error-msg">{{ error.$message }}</div>
+            <div class="form-setup">
+              <div class="col mb-2 input">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  v-model="v$.user.password.$model"
+                  required
+                  autocomplete="new-password"
+                />
+              </div>
+              <div
+                class="input-errors"
+                v-for="(error, index) of v$.user.password.$errors"
+                :key="index"
+              >
+                <div class="error-msg">{{ error.$message }}</div>
+              </div>
             </div>
-          </div>
-          <div class="form-setup">
-            <div class="col mb-2 input">
-              <input
-                type="password"
-                placeholder="Password"
-                autocomplete="new-password"
-                v-model="v$.user.password.$model"
-                required
-              />
-            </div>
-            <div
-              class="input-errors"
-              v-for="(error, index) of v$.user.password.$errors"
-              :key="index"
+            <button
+              class="submit"
+              type="button"
+              @click="submitSignIn()"
+              :disabled="v$.user.$invalid"
             >
-              <div class="error-msg">{{ error.$message }}</div>
+              Create account
+            </button>
+          </div>
+          <div class="foot">
+            <div>
+              Don’t have an account?
+              <router-link to="/signup" class="btn foot-btn"><strong>Sign in </strong></router-link>
+            </div>
+            <div>
+              <router-link to="/signup" class="btn foot-btn forgot-pwd"
+                >Forgot password?</router-link
+              >
             </div>
           </div>
-          <button
-            class="btn profile-button form-submit submit"
-            type="button"
-            @click="submitSignIn()"
-          >
-            Sign In
-          </button>
-        </div>
-        <div class="foot">
-          <router-link to="/signup"> Don't have an account?<strong> Sign up </strong></router-link>
-        </div>
-        <div class="foot">
-          <router-link to="/signin"> forgot password?<strong> Click me</strong></router-link>
         </div>
       </div>
     </div>
@@ -64,7 +72,7 @@
 
 <script>
 import SkipAPI from '../../api/resources/SkipAPI'
-const url_path = 'api/skeepuser'
+const url_path = 'api/getkeepuser'
 import VueDatePicker from '@vuepic/vue-datepicker'
 import '@vuepic/vue-datepicker/dist/main.css'
 import useVuelidate from '@vuelidate/core'

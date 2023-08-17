@@ -4,7 +4,7 @@
   background-color: #293462;
   background-size: cover;
   width: 50vw;
-  height: 150vh;
+  height: 160vh;
 }
 .main-img {
   margin: auto;
@@ -185,7 +185,6 @@ input::placeholder {
 }
 
 .foot strong {
-  padding-left: 5px;
   color: #4d455d;
   font-family: 'Roboto';
   font-size: 12.761px;
@@ -266,7 +265,7 @@ input::placeholder {
 @media (min-width: 601px) and (max-width: 768px) {
   .left {
     width: 50vw;
-    height: auto;
+    height: 15vh;
   }
 
   .right {
@@ -307,6 +306,10 @@ input::placeholder {
   }
 }
 
+.btn:hover {
+  color: #fff !important;
+  text-decoration: none;
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .top-main {

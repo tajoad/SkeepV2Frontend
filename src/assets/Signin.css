@@ -147,6 +147,17 @@ input::placeholder {
     height: auto;
     width: 70%;
   }
+  .foot-txt{
+    font-size: 11px;
+  }
+
+  .foot-txt strong{
+    font-size: 11px;
+  }
+
+  .foot-btn{
+    font-size: 11px;
+  }
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -169,5 +180,17 @@ input::placeholder {
     align-items: center;
     text-align: center;
     margin-top: 0px;
+  }
+  .foot-txt{
+    font-size: 8px;
+  }
+
+  .foot-txt strong{
+    font-size: 10px;
+    margin-left: -10px;
+  }
+
+  .foot-btn{
+    font-size: 8px;
   }
 }

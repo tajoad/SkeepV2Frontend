@@ -136,13 +136,13 @@ input::placeholder {
 }
 
 .google img {
-  padding-right: 8px;
+  padding-right: 6px;
 }
 .facebook img {
-  padding-right: 8px;
+  padding-right: 6px;
 }
 .twitter img {
-  padding-right: 8px;
+  padding-right: 6px;
 }
 .facebook {
   border: 1px solid #3d6ad6;
@@ -362,29 +362,37 @@ input::placeholder {
     width: 100%;
   }
   .google {
-    padding: 7px 4%;
-    margin-bottom: 15px;
-    font-size: small;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 7px auto;
+    font-size: 10px;
+    margin-bottom: 7px;
   }
 
+  .google img {
+    width: 20%;
+    height: 20%;
+  }
+
+
+  .facebook img {
+    width: 20%;
+    height: 20%;
+  }
+
+  .twitter img {
+    width: 20%;
+    height: 20%;
+  }
+
+
   .facebook {
-    padding: 7px 4%;
-    margin-bottom: 15px;
-    font-size: small;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 7px auto;
+    font-size: 10px;
+    margin-bottom: 7px;
   }
   .twitter {
-    padding: 7px 4%;
-    margin-bottom: 15px;
-    font-size: small;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 7px auto;
+    font-size: 10px;
+    margin-bottom: 7px;
   }
   .right {
     width: 100vw;

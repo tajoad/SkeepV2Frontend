@@ -117,11 +117,7 @@ input::placeholder {
 @media (min-width: 993px) and (max-width: 1200px) {
   .top img {
     height: auto;
-    width: 100%;
-  }
-  .top img {
-    height: auto;
-    width: 100%;
+    width: 80%;
   }
 }
 

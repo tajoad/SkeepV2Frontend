@@ -31,11 +31,18 @@
             <div class="form-setup">
               <div class="col mb-2 input">
                 <input
+                  id="password"
                   type="password"
                   placeholder="Password"
                   v-model="v$.user.password.$model"
                   required
                   autocomplete="new-password"
+                />
+                <img
+                  src="../images/password.svg"
+                  alt=""
+                  class="pass-img"
+                  @click="togglePassword(1)"
                 />
               </div>
               <div
@@ -48,10 +55,17 @@
             </div>
             <div class="col mb-2 input">
               <input
+                id="confirmPassword"
                 type="password"
                 placeholder="Confirm Password"
                 v-model="user.confirmPassword"
                 required
+              />
+              <img
+                src="../images/password.svg"
+                alt=""
+                class="pass-img"
+                @click="togglePassword(2)"
               />
             </div>
             <button
@@ -187,6 +201,21 @@ export default {
     },
     submitSignin: function () {
       this.$router.push({ name: 'Signin' })
+    },
+    togglePassword: function (call) {
+      const password = document.querySelector('#password')
+      const confirmPassword = document.querySelector('#confirmPassword')
+      // toggle the type attribute
+      if (call == 1) {
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password'
+        password.setAttribute('type', type)
+      } else {
+        const type = confirmPassword.getAttribute('type') === 'password' ? 'text' : 'password'
+        confirmPassword.setAttribute('type', type)
+      }
+      // toggle the eye icon
+      // this.classList.toggle('fa-eye')
+      //this.classList.toggle('fa-eye-slash')
     }
   }
 }

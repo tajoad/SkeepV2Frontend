@@ -30,11 +30,18 @@
               <div class="form-setup">
                 <div class="col mb-2 input">
                   <input
+                    id="password"
                     type="password"
                     placeholder="Password"
                     v-model="v$.user.password.$model"
                     required
                     autocomplete="new-password"
+                  />
+                  <img
+                    src="../images/password.svg"
+                    alt=""
+                    class="pass-img"
+                    @click="togglePassword()"
                   />
                 </div>
                 <div
@@ -143,7 +150,16 @@ export default {
         }
       }
     },
-    redirectToProfileorAboutMe: function () {}
+    redirectToProfileorAboutMe: function () {},
+    togglePassword: function () {
+      const password = document.querySelector('#password')
+      // toggle the type attribute
+      const type = password.getAttribute('type') === 'password' ? 'text' : 'password'
+      password.setAttribute('type', type)
+      // toggle the eye icon
+      this.classList.toggle('fa-eye')
+      this.classList.toggle('fa-eye-slash')
+    }
   }
 }
 </script>

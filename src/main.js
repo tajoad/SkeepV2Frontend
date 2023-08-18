@@ -4,6 +4,11 @@ import router from './router'
 import Toaster from '@meforma/vue-toaster';
 
 
+// import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+import "@fortawesome/fontawesome-free/css/all.css";
+import "@fortawesome/fontawesome-free/js/all.js";
+
+
 /*
     Bootstrap CSS, JS
 */

@@ -64,17 +64,19 @@
             </button>
           </div>
           <div class="social-media">
-            <h2>Sign up with</h2>
-            <div class="inner-social-media">
-              <button href="#" class="google btn">
-                <img src="../images/search.png" alt="" /> Sign up with Google
-              </button>
-              <button href="#" class="facebook btn">
-                <img src="../images/basil_facebook-solid.svg" alt="" /> Sign up with Facebook
-              </button>
-              <button href="#" class="twitter btn">
-                <img src="../images/mdi_twitter.svg" alt="" /> Sign up with Twitter
-              </button>
+            <div class="txt">
+              <h2>Sign up with</h2>
+              <div class="inner-social-media">
+                <button href="#" class="google btn">
+                  <img src="../images/search.png" alt="" /> Sign up with Google
+                </button>
+                <button href="#" class="facebook btn">
+                  <img src="../images/basil_facebook-solid.svg" alt="" /> Sign up with Facebook
+                </button>
+                <button href="#" class="twitter btn">
+                  <img src="../images/mdi_twitter.svg" alt="" /> Sign up with Twitter
+                </button>
+              </div>
             </div>
           </div>
           <div class="foot">

@@ -4,7 +4,7 @@
   background-color: #293462;
   background-size: cover;
   width: 50vw;
-  height: auto;
+  height: 150vh;
 }
 .main-img {
   margin: auto;
@@ -99,11 +99,12 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   border-radius: 24.473px;
-  opacity: 0.79000001192092896;
-  background: #cfcfcf;
+  background-color: rgba(207,207,207, 0.3);
+  text-align:center;
   padding: 8% 5%;
   margin-top: 10px;
 }
+
 .social-media h2 {
   color: #000000;
   font-family: 'Roboto';
@@ -363,7 +364,7 @@ input::placeholder {
   }
   .google {
     padding: 7px auto;
-    font-size: 10px;
+    font-size: 8px;
     margin-bottom: 7px;
   }
 
@@ -386,12 +387,12 @@ input::placeholder {
 
   .facebook {
     padding: 7px auto;
-    font-size: 10px;
+    font-size: 8px;
     margin-bottom: 7px;
   }
   .twitter {
     padding: 7px auto;
-    font-size: 10px;
+    font-size: 8px;
     margin-bottom: 7px;
   }
   .right {

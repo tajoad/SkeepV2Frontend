@@ -58,14 +58,14 @@
                 @click="submitSignIn()"
                 :disabled="v$.user.$invalid"
               >
-                Create account
+                Sign In
               </button>
             </div>
             <div class="foot">
               <div class="foot-txt">
                 Don’t have an account?
                 <router-link to="/signup" class="btn foot-btn"
-                  ><strong>Sign in </strong></router-link
+                  ><strong>Sign Up </strong></router-link
                 >
               </div>
               <div class="foot-txt">

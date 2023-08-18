@@ -44,6 +44,7 @@
   padding-top: 2em;
   padding-bottom: 1em;
 }
+
 .inner-right .inptags {
   display: flex;
   flex-direction: column;
@@ -99,8 +100,8 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   border-radius: 24.473px;
-  background-color: rgba(207,207,207, 0.3);
-  text-align:center;
+  background-color: rgba(207, 207, 207, 0.3);
+  text-align: center;
   padding: 8% 5%;
   margin-top: 10px;
 }
@@ -362,6 +363,10 @@ input::placeholder {
     height: 80%;
     width: 100%;
   }
+
+  .inptags {
+    height: 300px;
+  }
   .google {
     padding: 7px auto;
     font-size: 9px;
@@ -373,7 +378,6 @@ input::placeholder {
     height: 20%;
   }
 
-
   .facebook img {
     width: 20%;
     height: 20%;
@@ -383,7 +387,6 @@ input::placeholder {
     width: 20%;
     height: 20%;
   }
-
 
   .facebook {
     padding: 7px auto;

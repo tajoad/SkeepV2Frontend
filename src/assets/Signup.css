@@ -364,7 +364,7 @@ input::placeholder {
   }
   .google {
     padding: 7px auto;
-    font-size: 8px;
+    font-size: 9px;
     margin-bottom: 7px;
   }
 
@@ -387,18 +387,20 @@ input::placeholder {
 
   .facebook {
     padding: 7px auto;
-    font-size: 8px;
+    font-size: 9px;
     margin-bottom: 7px;
   }
   .twitter {
     padding: 7px auto;
-    font-size: 8px;
+    font-size: 9px;
     margin-bottom: 7px;
   }
   .right {
     width: 100vw;
   }
-
+  .social-media {
+    padding: 8% 0%;
+  }
   .right h2 {
     padding-top: 1em;
   }

@@ -405,7 +405,7 @@ input::placeholder {
     flex-direction: column;
   }
   .left {
-    height: 15vh;
+    height: 100px;
     width: 100vw;
     background: none;
     background-color: #293462;

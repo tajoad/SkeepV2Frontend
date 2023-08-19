@@ -407,7 +407,6 @@ input::placeholder {
   .left {
     height: 100px;
     width: 100vw;
-    background: none;
     background-color: #293462;
   }
   .img-height {

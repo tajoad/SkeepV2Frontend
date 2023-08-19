@@ -1,34 +1,73 @@
 <template>
-  <div class="main">
-    <h1>ABOUT ME</h1>
-    <div class="inputs">
-      <div class="mini" v-for="(item, index) in Questions" :key="item.id">
-        <div v-if="item.Q_id == '1'">
-          <input
-            type="text"
-            :placeholder="item.Question"
-            :value="content"
-            @change="updateValue"
-            :id="item.id"
-          />
+  <div class="row top-main">
+    <div class="col-3 left">
+      <div class="img-height">
+        <img src="../images/skeepw.png" alt="" class="main-img" />
+        <h2>Explore</h2>
+      </div>
+    </div>
+    <div class="col-9 right">
+      <div class="inner-main-right">
+        <h2>About me</h2>
+        <div class="inptags">
+          <div class="row inner-right-col">
+            <div class="col questions-cat">
+              <div v-for="(item, index) in Questions" :key="item.id">
+                <div v-if="item.Q_id == '1'">
+                  <input
+                    type="text"
+                    :placeholder="item.Question"
+                    :value="content"
+                    @change="updateValue"
+                    :id="item.id"
+                  />
+                </div>
+                <div class="row text">
+                  <div class="col" v-if="item.Q_id == '2'">
+                    <input
+                      type="text"
+                      :placeholder="item.Question"
+                      :value="content"
+                      @change="updateValue"
+                      :id="item.id"
+                    />
+                  </div>
+                  <div class="col" v-if="item.Q_id == '5'">
+                    <input
+                      type="text"
+                      :placeholder="item.Question"
+                      :value="content"
+                      @change="updateValue"
+                      :id="item.id"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col questions-cat">
+              <div class="form-setup">
+                <div class="input">
+                  <div class="mini" v-for="(item, index) in Questions" :key="item.id">
+                    <div v-if="item.Q_id == '3'">
+                      <input
+                        type="text"
+                        :placeholder="item.Question"
+                        :value="content"
+                        @change="updateValue"
+                        :id="item.id"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn">
+            <button class="btn done">Done</button>
+            <button class="btn add-questions">Add questions</button>
+          </div>
         </div>
       </div>
-      <div class="mini">
-        <input type="text" placeholder="Date of birth" />
-        <input type="text" placeholder="Favourite  Musician" />
-      </div>
-      <input type="text" placeholder="Country of residence" />
-      <div class="mini2">
-        <input type="text" placeholder="Gender" />
-        <input type="text" placeholder="height" />
-      </div>
-      <input type="text" placeholder="Occupation" />
-      <input type="text" placeholder="Nationality" />
-      <input type="text" placeholder="Hobbies" />
-    </div>
-    <div class="enter">
-      <a href="" class="done">Done</a>
-      <a href="" class="ask">Add questions</a>
     </div>
   </div>
 </template>

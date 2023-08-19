@@ -22,8 +22,8 @@
                     :id="item.id"
                   />
                 </div>
-                <div class="row text">
-                  <div class="col" v-if="item.Q_id == '2'">
+                <div class="chk">
+                  <div class="" v-if="item.Q_id == '2'">
                     <input
                       type="text"
                       :placeholder="item.Question"
@@ -32,7 +32,7 @@
                       :id="item.id"
                     />
                   </div>
-                  <div class="col" v-if="item.Q_id == '5'">
+                  <div class="" v-if="item.Q_id == '5'">
                     <input
                       type="text"
                       :placeholder="item.Question"

@@ -129,6 +129,15 @@ input::placeholder {
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 993px) and (min-width: 1200px) {
+  .top img {
+    height: auto;
+    width: 80%;
+  }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media (min-width: 993px) and (max-width: 1200px) {
   .top img {
     height: auto;

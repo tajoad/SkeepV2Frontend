@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     autoRedirect: function () {
-      this.$router.push({ name: 'Signup' })
+      this.$router.push({ name: 'Signin' })
     }
   },
   mounted() {

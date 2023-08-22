@@ -12,14 +12,42 @@
         <div class="inptags">
           <div class="row inner-right-col">
             <div class="col questions-cat">
-              <div v-for="(item, index) in Questions" :key="item.id">
-                <div v-if="item.Q_id == '1'">
+              <div v-for="(item, index) in Questions" :key="item._id">
+                <div
+                  v-if="
+                    item.Q_id == '1' &&
+                    item._id !== '64da391a1270944dfd7ce072' &&
+                    item._id != '64da3f551270944dfd7ce080'
+                  "
+                >
                   <input
                     type="text"
                     :placeholder="item.Question"
                     :value="content"
                     @change="updateValue"
-                    :id="item.id"
+                    :id="item._id"
+                  />
+                </div>
+                <div v-if="item.Q_id == '1' && item._id == '64da391a1270944dfd7ce072'">
+                  <span class="datepicker-toggle">
+                    <span class="datepicker-toggle-button"></span>
+                    <input
+                      type="text"
+                      onfocus="(this.type='date')"
+                      :placeholder="item.Question"
+                      :value="content"
+                      @change="updateValue"
+                      :id="item._id"
+                    />
+                  </span>
+                </div>
+                <div v-if="item.Q_id == '1' && item._id == '64da3f551270944dfd7ce080'">
+                  <input
+                    type="text"
+                    :placeholder="item.Question"
+                    :value="content"
+                    @change="updateValue"
+                    :id="item._id"
                   />
                 </div>
                 <div class="chk">
@@ -29,7 +57,7 @@
                       :placeholder="item.Question"
                       :value="content"
                       @change="updateValue"
-                      :id="item.id"
+                      :id="item._id"
                     />
                   </div>
                   <div class="" v-if="item.Q_id == '5'">
@@ -38,7 +66,7 @@
                       :placeholder="item.Question"
                       :value="content"
                       @change="updateValue"
-                      :id="item.id"
+                      :id="item._id"
                     />
                   </div>
                 </div>
@@ -47,14 +75,14 @@
             <div class="col questions-cat">
               <div class="form-setup">
                 <div class="input">
-                  <div class="mini" v-for="(item, index) in Questions" :key="item.id">
+                  <div class="mini" v-for="(item, index) in Questions" :key="item._id">
                     <div v-if="item.Q_id == '3'">
                       <input
                         type="text"
                         :placeholder="item.Question"
                         :value="content"
                         @change="updateValue"
-                        :id="item.id"
+                        :id="item._id"
                       />
                     </div>
                   </div>
@@ -63,7 +91,7 @@
             </div>
           </div>
           <div class="btn">
-            <button class="btn done">Done</button>
+            <button class="btn done" @click="submitAboutMe()">Done</button>
             <button class="btn add-questions">Add questions</button>
           </div>
         </div>
@@ -75,7 +103,8 @@
 <script>
 import SkipAPI from '../../api/resources/SkipAPI'
 const abt_path = 'aboutme'
-const url_path = 'answers'
+const url_path = 'api/skeepanswer'
+const get_count = 'https://countriesnow.space/api/v0.1/countries/population/cities'
 const ques_path = 'api/skeepquestion'
 
 const val = []
@@ -89,7 +118,8 @@ export default {
     return {
       Questions: null,
       dataToSend: null,
-      userid: this.$route.params.id
+      userid: this.$route.params.id,
+      countries: null
     }
   },
   methods: {
@@ -98,6 +128,8 @@ export default {
     },
     submitAboutMe: async function () {
       const convertData = JSON.stringify(val)
+
+      console.log(convertData)
 
       const data = await SkipAPI.store(url_path, convertData)
 
@@ -127,10 +159,12 @@ export default {
     updateValue(event) {
       let id = event.target.id
       let content = event.target.value
+
+      console.log(id)
       const getVal = {
-        value: content,
-        id: id,
-        userid: this.userid
+        Answer: content,
+        Questionid: id,
+        Personid: this.userid
       }
       val.push(getVal)
     },
@@ -139,10 +173,18 @@ export default {
 
       const userData = JSON.parse(data)
       this.Questions = userData
+    },
+    getCountries: async function () {
+      const countries = await SkipAPI.getCountries(get_count)
+      const userData = JSON.parse(countries)
+      userData.data.forEach((element) => {
+        this.countries = element.country
+      })
     }
   },
   mounted() {
     this.getQuestion()
+    this.getCountries()
   }
 }
 </script>

@@ -27,10 +27,10 @@
 }
 
 .inner-main-right {
-  padding: 8% 9%;
+  padding: 9%;
 }
 
-.chk{
+.chk {
   display: flex;
   flex-direction: column;
 }
@@ -44,7 +44,7 @@
   line-height: normal;
 }
 
-input {
+input[type='text'] {
   padding: 8px 7px;
   margin-bottom: 5px;
   border: 2.447px solid #ddd;
@@ -54,6 +54,18 @@ input {
   border-radius: 6.118px;
   background: #fff;
   text-indent: 20px;
+}
+
+input[type='date'] {
+  padding: 8px 7px;
+  margin-bottom: 5px;
+  border: 2.447px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #fff url(../asset/calendar_2.png) 97% 50% no-repeat;
+  width: 100%;
+  border-radius: 6.118px;
+  text-indent: 10px;
 }
 
 input::placeholder {
@@ -83,6 +95,15 @@ input::placeholder {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  transition: 0.5s background;
+}
+
+.done:active {
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  background: #fff;
+  color: #f24c4c;
 }
 
 .add-questions {
@@ -98,6 +119,16 @@ input::placeholder {
   font-weight: 700;
   line-height: normal;
 }
+
+::-webkit-calendar-picker-indicator {
+  background-color: #ffffff;
+  padding: 2px;
+  cursor: pointer;
+  filter: invert(100%);
+  opacity: 0;
+  border-radius: 3px;
+}
+
 @media only screen and (max-width: 600px) {
   .top-main {
     margin: 0%;

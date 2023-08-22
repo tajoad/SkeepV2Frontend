@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="row row-cols-1 main">
         <div class="col top">
-          <img src="../images/skeep1.png" alt="" />
+          <img src="../images/skeep3.png" alt="" />
         </div>
         <div class="col">
           <div class="inner-right">

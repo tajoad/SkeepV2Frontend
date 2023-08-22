@@ -64,13 +64,13 @@ export default {
 
   getCountries(baseURL) {
     return fetch(baseURL, {
-      method: 'GET'
+      method: 'GET',
     })
       .then((response) => {
         if (!response.ok) {
           throw new Error(response.error)
         }
-        return response.json()
+        return response.text()
       })
       .then((data) => {
         return data

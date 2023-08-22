@@ -33,7 +33,7 @@
                     <span class="datepicker-toggle-button"></span>
                     <input
                       type="text"
-                      onfocus="(this.type='date')"
+                       onfocus="this.type = 'date'"
                       :placeholder="item.Question"
                       :value="content"
                       @change="updateValue"

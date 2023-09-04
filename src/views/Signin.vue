@@ -143,7 +143,7 @@ export default {
           max: 1
         })
       } else {
-        this.$router.push({ name: 'MyProfile', params: { id: getData.responseMsg } })
+        this.$router.push({ name: 'Aboutme', params: { id: getData.responseMsg } })
         /*  if (getData.respSubmitted) {
           this.$router.push({ name: 'MyProfile', params: { id: getData.responseMsg } })
         } else {

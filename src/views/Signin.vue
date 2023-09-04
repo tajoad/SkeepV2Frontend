@@ -143,11 +143,12 @@ export default {
           max: 1
         })
       } else {
-        if (getData.respSubmitted) {
+        this.$router.push({ name: 'MyProfile', params: { id: getData.responseMsg } })
+        /*  if (getData.respSubmitted) {
           this.$router.push({ name: 'MyProfile', params: { id: getData.responseMsg } })
         } else {
           this.$router.push({ name: 'Aboutme', params: { id: getData.responseMsg } })
-        }
+        }*/
       }
     },
     redirectToProfileorAboutMe: function () {},

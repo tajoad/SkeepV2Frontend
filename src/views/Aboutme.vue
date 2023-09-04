@@ -9,91 +9,112 @@
     <div class="col-9 right">
       <div class="inner-main-right">
         <h2>About me</h2>
-        <div class="inptags">
-          <div class="row inner-right-col">
-            <div class="col questions-cat">
-              <div v-for="(item, index) in Questions" :key="item._id">
-                <div
-                  v-if="
-                    item.Q_id == '1' &&
-                    item._id !== '64da391a1270944dfd7ce072' &&
-                    item._id != '64da3f551270944dfd7ce080'
-                  "
+        <div class="row inner-right-col">
+          <div class="col mb-2 input">
+            <input
+              v-for="(item, index) in firstQuestions"
+              :key="item.id"
+              type="text"
+              class="form-control"
+              :placeholder="item.Question"
+              :value="content"
+              @change="updateValue"
+              :id="item.id"
+            />
+            <input
+              v-for="(item, index) in SecondQuestions"
+              :key="item.id"
+              type="text"
+              class="form-control"
+              :placeholder="item.Question"
+              :value="content"
+              @change="updateValue"
+              :id="item.id"
+            />
+            <div class="row">
+              <div class="col">
+                <input
+                  v-for="(item, index) in thirdQuestions"
+                  :key="item.id"
+                  type="text"
+                  class="form-control"
+                  :placeholder="item.Question"
+                  :value="content"
+                  @change="updateValue"
+                  :id="item.id"
+                />
+              </div>
+              <div class="col">
+                <input
+                  v-for="(item, index) in fourthQuestions"
+                  :key="item.id"
+                  type="text"
+                  class="form-control"
+                  :placeholder="item.Question"
+                  :value="content"
+                  @change="updateValue"
+                  :id="item.id"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col mb-2 input">
+            <div
+              v-for="(input, index) in extraQuestion"
+              :key="`${index}`"
+              class="input wrapper flex items-center"
+            >
+              <div class="inp">
+                <input
+                  v-model="input.question"
+                  type="text"
+                  class="h-10 rounded-lg outline-none p-2"
+                  placeholder="Type your new question"
+                />
+                <!--          Add Svg Icon-->
+                <svg
+                  @click="addField(input, extraQuestion)"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  class="ml-2 cursor-pointer"
                 >
-                  <input
-                    type="text"
-                    :placeholder="item.Question"
-                    :value="content"
-                    @change="updateValue"
-                    :id="item._id"
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    fill="green"
+                    d="M11 11V7h2v4h4v2h-4v4h-2v-4H7v-2h4zm1 11C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"
                   />
-                </div>
-                <div v-if="item.Q_id == '1' && item._id == '64da391a1270944dfd7ce072'">
-                  <span class="datepicker-toggle">
-                    <span class="datepicker-toggle-button"></span>
-                    <input
-                      type="text"
-                       onfocus="this.type = 'date'"
-                      :placeholder="item.Question"
-                      :value="content"
-                      @change="updateValue"
-                      :id="item._id"
-                    />
-                  </span>
-                </div>
-                <div v-if="item.Q_id == '1' && item._id == '64da3f551270944dfd7ce080'">
-                  <input
-                    type="text"
-                    :placeholder="item.Question"
-                    :value="content"
-                    @change="updateValue"
-                    :id="item._id"
+                </svg>
+
+                <!--          Remove Svg Icon-->
+                <svg
+                  v-show="extraQuestion.length > 1"
+                  @click="removeField(index, extraQuestion)"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  class="ml-2 cursor-pointer"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    fill="#EC4899"
+                    d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-9.414l2.828-2.829 1.415 1.415L13.414 12l2.829 2.828-1.415 1.415L12 13.414l-2.828 2.829-1.415-1.415L10.586 12 7.757 9.172l1.415-1.415L12 10.586z"
                   />
-                </div>
-                <div class="chk">
-                  <div class="" v-if="item.Q_id == '2'">
-                    <input
-                      type="text"
-                      :placeholder="item.Question"
-                      :value="content"
-                      @change="updateValue"
-                      :id="item._id"
-                    />
-                  </div>
-                  <div class="" v-if="item.Q_id == '5'">
-                    <input
-                      type="text"
-                      :placeholder="item.Question"
-                      :value="content"
-                      @change="updateValue"
-                      :id="item._id"
-                    />
-                  </div>
-                </div>
+                </svg>
               </div>
-            </div>
-            <div class="col questions-cat">
-              <div class="form-setup">
-                <div class="input">
-                  <div class="mini" v-for="(item, index) in Questions" :key="item._id">
-                    <div v-if="item.Q_id == '3'">
-                      <input
-                        type="text"
-                        :placeholder="item.Question"
-                        :value="content"
-                        @change="updateValue"
-                        :id="item._id"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <input
+                v-model="input.answer"
+                type="text"
+                class="h-10 rounded-lg outline-none p-2"
+                placeholder="Give answer"
+              />
             </div>
           </div>
-          <div class="btn">
-            <button class="btn done" @click="submitAboutMe()">Done</button>
-            <button class="btn add-questions">Add questions</button>
-          </div>
+        </div>
+        <div class="set-btn mt-5">
+          <button class="btn done" @click="submitAboutMe()">Done</button>
         </div>
       </div>
     </div>
@@ -103,11 +124,13 @@
 <script>
 import SkipAPI from '../../api/resources/SkipAPI'
 const abt_path = 'aboutme'
-const url_path = 'api/skeepanswer'
+const url_path = 'answers'
+const extraQue_path = 'extra'
 const get_count = 'https://countriesnow.space/api/v0.1/countries/population/cities'
-const ques_path = 'api/skeepquestion'
+const ques_path = 'getquestions'
 
 const val = []
+
 export default {
   name: 'BaseInput',
   props: {
@@ -116,22 +139,31 @@ export default {
   },
   data() {
     return {
-      Questions: null,
+      firstQuestions: null,
+      SecondQuestions: null,
+      thirdQuestions: null,
+      fourthQuestions: null,
+      extraQuestion: [{ personid: this.$route.params.id, question: '', answer: '' }],
       dataToSend: null,
       userid: this.$route.params.id,
-      countries: null
+      countries: null,
+      user: {
+        extraQuestions: null
+      }
     }
   },
   methods: {
     redirectToProfile: function (id) {
       this.$router.push({ name: 'MyProfile' })
     },
-    submitAboutMe: async function () {
+    submitAboutMe: async function (event) {
       const convertData = JSON.stringify(val)
 
-      console.log(convertData)
+      const convertQues = JSON.stringify(this.extraQuestion)
 
       const data = await SkipAPI.store(url_path, convertData)
+
+      const extraData = await SkipAPI.store(extraQue_path, convertQues)
 
       const getData = JSON.parse(data)
 
@@ -172,7 +204,20 @@ export default {
       const data = await SkipAPI.indexOnly(ques_path)
 
       const userData = JSON.parse(data)
-      this.Questions = userData
+      // this.Questions = userData
+
+      const result1 = userData ? userData.filter((question) => question.groupNum == '1') : []
+      const result2 = userData ? userData.filter((question) => question.groupNum == '2') : []
+      const result3 = userData ? userData.filter((question) => question.groupNum == '3') : []
+      const result4 = userData ? userData.filter((question) => question.groupNum == '4') : []
+
+      this.firstQuestions = result1
+      this.SecondQuestions = result2
+      this.thirdQuestions = result3
+      this.fourthQuestions = result4
+      console.log(result1)
+
+      console.log(result2)
     },
     getCountries: async function () {
       const countries = await SkipAPI.getCountries(get_count)
@@ -180,6 +225,12 @@ export default {
       userData.data.forEach((element) => {
         this.countries = element.country
       })
+    },
+    addField(value, fieldType) {
+      fieldType.push({ personid: this.userid, question: '', answer: '' })
+    },
+    removeField(index, fieldType) {
+      fieldType.splice(index, 1)
     }
   },
   mounted() {

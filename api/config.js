@@ -5,5 +5,6 @@ export const APISettings = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Credentials': true
   }),
-  baseURL: 'https://skeepv3-backend.onrender.com/'
+  baseURL: 'http://localhost:3002/'
+  // baseURL: 'https://skeepv3-backend.onrender.com/'
 }

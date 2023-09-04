@@ -109,7 +109,7 @@
 
 <script>
 import SkipAPI from '../../api/resources/SkipAPI'
-const url_path = 'api/createskeepuser'
+const url_path = 'signup'
 import VueDatePicker from '@vuepic/vue-datepicker'
 import '@vuepic/vue-datepicker/dist/main.css'
 import useVuelidate from '@vuelidate/core'

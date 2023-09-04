@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,400&family=Roboto:wght@300;400;500;700&family=Sora:wght@400;600;700&display=swap');
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%; /* full window width */
+  text-align: center;
+  height: auto;
+}
+
 .left {
   background: url('../images/7600.png') no-repeat;
   background-color: #293462;
@@ -6,6 +15,12 @@
   height: auto;
 }
 
+.inp {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+}
 .img-height {
   margin: 20% auto;
   width: 60%;
@@ -87,7 +102,7 @@ input::placeholder {
 .done {
   padding: 15px 50px;
   border-radius: 6.109px;
-  width: 100%;
+  width: 49%;
   background: #f24c4c;
   box-shadow: 0px 4.887459754943848px 4.887459754943848px 0px rgba(0, 0, 0, 0.25);
   color: #fff;
@@ -109,7 +124,7 @@ input::placeholder {
 
 .add-questions {
   padding: 15px 50px;
-  width: 100%;
+  width: 49%;
   border-radius: 6.109px;
   background: #293462;
   box-shadow: 0px 4.887459754943848px 4.887459754943848px 0px rgba(0, 0, 0, 0.25);
@@ -130,6 +145,69 @@ input::placeholder {
   border-radius: 3px;
 }
 
+@media (min-width: 966px) {
+
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+  .top-main {
+    margin: 0%;
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .btn {
+    display: block;
+    justify-content: left;
+    align-items: flex-start;
+    margin: 20px 0px;
+    width: 100%;
+    border: none;
+  }
+
+  .right {
+    width: 100%;
+  }
+  .inner-main-right h2 {
+    padding: 8px 30px;
+    font-size: 2em;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+
+  .inner-right-col {
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  }
+  .img-height {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    margin: 0% auto;
+    height: 100%;
+    width: 80%;
+  }
+
+  .main-img {
+    height: 80%;
+    width: 80%;
+  }
+
+  .set-btn {
+    padding: 0% 3%;
+    border: none;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .top-main {
     margin: 0%;
@@ -147,7 +225,7 @@ input::placeholder {
     align-items: flex-start;
     margin: 20px 0px;
     width: 100%;
-    border: none
+    border: none;
   }
 
   .right {
@@ -181,5 +259,10 @@ input::placeholder {
   .main-img {
     height: 80%;
     width: 80%;
+  }
+
+  .set-btn {
+    padding: 0% 3%;
+    border: none;
   }
 }

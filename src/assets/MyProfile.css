@@ -4,19 +4,30 @@ body {
   margin: 0;
   padding: 0;
   width: 100%; /* full window width */
-  text-align: center;
-  height: 100vh;
+  height: auto;
 }
 
 .left {
   background: url('../images/7600.png') no-repeat;
-  background-color: rgba(41,52,98);
+  background-color: rgba(41, 52, 98);
   background-size: cover;
-  height: 100vh;
+  height: auto;
 }
-.txt{
+.txt {
   height: 100vh;
   width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.file1 {
+  border-radius: 10px;
+  background: rgba(185, 185, 185, 0.28);
+  width: 351px;
+  height: 351px;
+  flex-shrink: 0;
 }
 .img-height {
   margin: 20% auto;
@@ -27,6 +38,12 @@ body {
   text-align: left;
   flex-direction: column;
 }
+
+/* .right{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
 
 .img-height h2 {
   color: #fff;
@@ -39,9 +56,11 @@ body {
 }
 
 .inner-main-right {
-  padding: 9%;
+  padding: 7%;
 }
-
+/* .image-container {
+  padding: 0% 3%;
+} */
 .chk {
   display: flex;
   flex-direction: column;
@@ -142,6 +161,64 @@ input::placeholder {
   border-radius: 3px;
 }
 
+.height-100 {
+  height: 100vh;
+}
+.modal-header > .modal-title {
+  font-size: 14px;
+}
+.modal-body > .body-desc {
+  font-size: 14px;
+}
+.modal-footer > .footer-title {
+  font-size: 12px;
+}
+#loadFile {
+  display: none;
+}
+.modal-header > .modal-title,
+.modal-body > .body-desc,
+.modal-body > .photo-input,
+.modal-footer > .footer-title {
+  text-align: center;
+}
+
+.input-upload {
+  width: 351px;
+  height: 351px;
+  border-radius: 10px;
+  background: rgba(185, 185, 185, 0.28);
+}
+.input-upload2 {
+  width: 170px;
+  height: 170px;
+  border-radius: 10px;
+  background: rgba(185, 185, 185, 0.28);
+}
+
+.padding-0 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.information-container{
+  display: flex;
+  align-items: left;
+  text-align: left;
+  justify-content: left;
+}
+
+.information-container h2 {
+  color: #000;
+  text-align: center;
+  font-family: 'Roboto';
+  font-size: 31.788px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 190%; /* 60.397px */
+}
+
+/* 
 @media (min-width: 601px) and (max-width: 768px) {
   .top-main {
     margin: 0%;
@@ -258,4 +335,4 @@ input::placeholder {
     padding: 0% 3%;
     border: none;
   }
-}
+} */

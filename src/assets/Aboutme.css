@@ -45,6 +45,15 @@ body {
   padding: 9%;
 }
 
+.inner-main-right h2 {
+  color: #000;
+  font-family: 'Roboto';
+  font-size: 50.597px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
 .chk {
   display: flex;
   flex-direction: column;
@@ -62,10 +71,11 @@ body {
 input[type='text'] {
   padding: 8px 7px;
   margin-bottom: 5px;
-  border: 2.447px solid #ddd;
+  border: 2px solid #ddd;
   border-radius: 4px;
   cursor: pointer;
   width: 100%;
+  color:#343434;
   border-radius: 6.118px;
   background: #fff;
   text-indent: 20px;
@@ -74,7 +84,7 @@ input[type='text'] {
 input[type='date'] {
   padding: 8px 7px;
   margin-bottom: 5px;
-  border: 2.447px solid #ddd;
+  border: 2px solid #ddd;
   border-radius: 4px;
   cursor: pointer;
   background: #fff url(../asset/calendar_2.png) 97% 50% no-repeat;
@@ -90,6 +100,10 @@ input::placeholder {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+input:focus{
+  border: 2px solid rgba(72, 36, 36, 0.16);
 }
 
 .btn {
@@ -146,7 +160,6 @@ input::placeholder {
 }
 
 @media (min-width: 966px) {
-
 }
 
 @media (min-width: 601px) and (max-width: 768px) {

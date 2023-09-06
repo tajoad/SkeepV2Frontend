@@ -11,49 +11,44 @@
         <h2>About me</h2>
         <div class="row inner-right-col">
           <div class="col mb-2 input">
+            <input type="text" class="" placeholder="Name" :id="1" @change="updateValue" />
             <input
-              v-for="(item, index) in firstQuestions"
-              :key="item.id"
               type="text"
-              class="form-control"
-              :placeholder="item.Question"
-              :value="content"
+              class=""
+              placeholder="Date of Birth"
+              :id="2"
               @change="updateValue"
-              :id="item.id"
+              onfocus="this.type='date'"
             />
             <input
-              v-for="(item, index) in SecondQuestions"
-              :key="item.id"
               type="text"
-              class="form-control"
-              :placeholder="item.Question"
-              :value="content"
+              class=""
+              placeholder="City of Residence"
+              :id="3"
               @change="updateValue"
-              :id="item.id"
             />
+            <input type="text" class="" placeholder="Occupation" :id="4" @change="updateValue" />
+            <input type="text" class="" placeholder="Nationality" :id="5" @change="updateValue" />
+            <input type="text" class="" placeholder="Hobbies" :id="5" @change="updateValue" />
             <div class="row">
               <div class="col">
                 <input
-                  v-for="(item, index) in thirdQuestions"
-                  :key="item.id"
                   type="text"
-                  class="form-control"
-                  :placeholder="item.Question"
+                  class=""
+                  placeholder="Gender"
                   :value="content"
                   @change="updateValue"
-                  :id="item.id"
+                  :id="6"
                 />
               </div>
               <div class="col">
                 <input
-                  v-for="(item, index) in fourthQuestions"
-                  :key="item.id"
                   type="text"
-                  class="form-control"
-                  :placeholder="item.Question"
+                  class=""
+                  placeholder="Height"
                   :value="content"
                   @change="updateValue"
-                  :id="item.id"
+                  :id="7"
                 />
               </div>
             </div>
@@ -157,42 +152,40 @@ export default {
       this.$router.push({ name: 'MyProfile' })
     },
     submitAboutMe: async function (event) {
-      const convertData = JSON.stringify(val)
+      if (Array.isArray(this.extraQuestion) && this.extraQuestion[0].answer !== '') {
+        const convertQues = JSON.stringify(this.extraQuestion)
+        const data = await SkipAPI.store(extraQue_path, convertQues)
+        console.log(data)
+      }
 
-      const convertQues = JSON.stringify(this.extraQuestion)
-
-      const data = await SkipAPI.store(url_path, convertData)
-
-      const extraData = await SkipAPI.store(extraQue_path, convertQues)
-
-      const getData = JSON.parse(data)
-
-      console.log(getData)
-
-      if (getData.responseCode === 0) {
-        this.$toast.error(getData.responseMsg, {
-          type: 'error',
-          position: 'top',
-          dismissible: false,
-          max: 1
-        })
-      } else {
-        this.$toast.success(getData.responseMsg, {
-          type: 'success',
-          position: 'top',
-          dismissible: false,
-          max: 1
-        })
-        setInterval(() => {
-          this.$router.push({ name: 'MyProfile', params: { id: this.userid } })
-        }, 3000)
+      if (Array.isArray(val) && val.length > 0) {
+        const convertData = JSON.stringify(val)
+        const res = await SkipAPI.store(url_path, convertData)
+        const getData = JSON.parse(res)
+        console.log(getData)
+        if (getData.status === 200) {
+          this.$toast.success(getData.message, {
+            type: 'success',
+            position: 'top',
+            dismissible: false,
+            max: 1
+          })
+          setInterval(() => {
+            this.$router.push({ name: 'MyProfile', params: { id: this.userid } })
+          }, 3000)
+        } else {
+          this.$toast.error(getData.message, {
+            type: 'error',
+            position: 'top',
+            dismissible: false,
+            max: 1
+          })
+        }
       }
     },
     updateValue(event) {
       let id = event.target.id
       let content = event.target.value
-
-      console.log(id)
       const getVal = {
         Answer: content,
         Questionid: id,
@@ -234,7 +227,7 @@ export default {
     }
   },
   mounted() {
-    this.getQuestion()
+    //this.getQuestion()
     this.getCountries()
   }
 }

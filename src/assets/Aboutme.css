@@ -19,7 +19,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  width: 100%;
+  width: auto;
 }
 .img-height {
   margin: 20% auto;
@@ -157,9 +157,6 @@ input:focus{
   filter: invert(100%);
   opacity: 0;
   border-radius: 3px;
-}
-
-@media (min-width: 966px) {
 }
 
 @media (min-width: 601px) and (max-width: 768px) {

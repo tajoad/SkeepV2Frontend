@@ -11,12 +11,22 @@
         <h2>About me</h2>
         <div class="row inner-right-col">
           <div class="col mb-2 input">
-            <input type="text" class="" placeholder="Name" :id="1" @change="updateValue" />
+            <input
+              type="text"
+              class=""
+              placeholder="Name"
+              :id="1"
+              :value="users.Name"
+              @input="users.Name = $event.target.value"
+              @change="updateValue"
+            />
             <input
               type="text"
               class=""
               placeholder="Date of Birth"
               :id="2"
+              :value="users.DateOfBirth"
+              @input="users.DateOfBirth = $event.target.value"
               @change="updateValue"
               onfocus="this.type='date'"
             />
@@ -25,20 +35,47 @@
               class=""
               placeholder="City of Residence"
               :id="3"
+              :value="users.CityOfResidence"
+              @input="users.CityOfResidence = $event.target.value"
               @change="updateValue"
             />
-            <input type="text" class="" placeholder="Occupation" :id="4" @change="updateValue" />
-            <input type="text" class="" placeholder="Nationality" :id="5" @change="updateValue" />
-            <input type="text" class="" placeholder="Hobbies" :id="5" @change="updateValue" />
+            <input
+              type="text"
+              class=""
+              placeholder="Occupation"
+              :id="4"
+              :value="users.Occupation"
+              @input="users.Occupation = $event.target.value"
+              @change="updateValue"
+            />
+            <input
+              type="text"
+              class=""
+              placeholder="Nationality"
+              :id="5"
+              :value="users.Nationality"
+              @input="users.Nationality = $event.target.value"
+              @change="updateValue"
+            />
+            <input
+              type="text"
+              class=""
+              placeholder="Hobbies"
+              :id="6"
+              :value="users.Hobbies"
+              @input="users.Hobbies = $event.target.value"
+              @change="updateValue"
+            />
             <div class="row">
               <div class="col">
                 <input
                   type="text"
                   class=""
                   placeholder="Gender"
-                  :value="content"
+                  :value="users.Gender"
+                  @input="users.Gender = $event.target.value"
                   @change="updateValue"
-                  :id="6"
+                  :id="7"
                 />
               </div>
               <div class="col">
@@ -46,9 +83,10 @@
                   type="text"
                   class=""
                   placeholder="Height"
-                  :value="content"
+                  :value="users.Height"
+                  @input="users.Height = $event.target.value"
                   @change="updateValue"
-                  :id="7"
+                  :id="8"
                 />
               </div>
             </div>
@@ -61,10 +99,11 @@
             >
               <div class="inp">
                 <input
-                  v-model="input.question"
+                  v-model="input.Question"
                   type="text"
                   class="h-10 rounded-lg outline-none p-2"
                   placeholder="Type your new question"
+                  :id="input.Questionid"
                 />
                 <!--          Add Svg Icon-->
                 <svg
@@ -85,7 +124,7 @@
                 <!--          Remove Svg Icon-->
                 <svg
                   v-show="extraQuestion.length > 1"
-                  @click="removeField(index, extraQuestion)"
+                  @click="removeField(index, extraQuestion, event)"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   width="24"
@@ -100,10 +139,11 @@
                 </svg>
               </div>
               <input
-                v-model="input.answer"
+                v-model="input.Answer"
                 type="text"
                 class="h-10 rounded-lg outline-none p-2"
                 placeholder="Give answer"
+                :id="input.Questionid"
               />
             </div>
           </div>
@@ -119,12 +159,9 @@
 <script>
 import SkipAPI from '../../api/resources/SkipAPI'
 const abt_path = 'aboutme'
-const url_path = 'answers'
-const extraQue_path = 'extra'
+const url_path = 'answer'
+const getAnswer = 'getanswers'
 const get_count = 'https://countriesnow.space/api/v0.1/countries/population/cities'
-const ques_path = 'getquestions'
-
-const val = []
 
 export default {
   name: 'BaseInput',
@@ -134,14 +171,24 @@ export default {
   },
   data() {
     return {
-      firstQuestions: null,
-      SecondQuestions: null,
-      thirdQuestions: null,
-      fourthQuestions: null,
-      extraQuestion: [{ personid: this.$route.params.id, question: '', answer: '' }],
+      extraQuestion: [
+        { Answer: '', Question: '', Questionid: '', Personid: this.$route.params.id }
+      ],
       dataToSend: null,
+      val: [],
+      retrieveExtraQues: null,
       userid: this.$route.params.id,
       countries: null,
+      users: {
+        Name: null,
+        DateOfBirth: null,
+        CityOfResidence: null,
+        Occupation: null,
+        Nationality: null,
+        Hobbies: null,
+        Gender: null,
+        Height: null
+      },
       user: {
         extraQuestions: null
       }
@@ -152,27 +199,26 @@ export default {
       this.$router.push({ name: 'MyProfile' })
     },
     submitAboutMe: async function (event) {
-      if (Array.isArray(this.extraQuestion) && this.extraQuestion[0].answer !== '') {
-        const convertQues = JSON.stringify(this.extraQuestion)
-        const data = await SkipAPI.store(extraQue_path, convertQues)
-        console.log(data)
-      }
+      this.extraQuestion.forEach((element) => {
+        this.val.push(element)
+      })
 
-      if (Array.isArray(val) && val.length > 0) {
-        const convertData = JSON.stringify(val)
+      console.log(this.val)
+      if (Array.isArray(this.val) && this.val.length > 0) {
+        const convertData = JSON.stringify(this.val)
         const res = await SkipAPI.store(url_path, convertData)
         const getData = JSON.parse(res)
         console.log(getData)
-        if (getData.status === 200) {
+        if (getData.statusCode === 200) {
           this.$toast.success(getData.message, {
             type: 'success',
             position: 'top',
             dismissible: false,
             max: 1
           })
-          setInterval(() => {
+          /* setInterval(() => {
             this.$router.push({ name: 'MyProfile', params: { id: this.userid } })
-          }, 3000)
+          }, 3000)*/
         } else {
           this.$toast.error(getData.message, {
             type: 'error',
@@ -188,29 +234,60 @@ export default {
       let content = event.target.value
       const getVal = {
         Answer: content,
+        Question: '',
         Questionid: id,
         Personid: this.userid
       }
-      val.push(getVal)
+      this.val.push(getVal)
     },
-    getQuestion: async function () {
-      const data = await SkipAPI.indexOnly(ques_path)
-
-      const userData = JSON.parse(data)
-      // this.Questions = userData
-
-      const result1 = userData ? userData.filter((question) => question.groupNum == '1') : []
-      const result2 = userData ? userData.filter((question) => question.groupNum == '2') : []
-      const result3 = userData ? userData.filter((question) => question.groupNum == '3') : []
-      const result4 = userData ? userData.filter((question) => question.groupNum == '4') : []
-
-      this.firstQuestions = result1
-      this.SecondQuestions = result2
-      this.thirdQuestions = result3
-      this.fourthQuestions = result4
-      console.log(result1)
-
-      console.log(result2)
+    getAnswer: async function () {
+      const getid = {
+        Personid: this.userid
+      }
+      const convertData = JSON.stringify(getid)
+      const res = await SkipAPI.store(getAnswer, convertData)
+      const userData = JSON.parse(res)
+      const result3 = userData ? userData.filter((question) => question.Questionid > '8') : []
+      console.log(result3)
+      if (result3.length > 0) {
+        this.extraQuestion[0].Question = result3[0].Question
+        this.extraQuestion[0].Answer = result3[0].Answer
+        this.extraQuestion[0].Questionid = result3[0].Questionid
+        const otherElements = result3.slice(1)
+        otherElements.forEach((element) => {
+          this.extraQuestion.push(element)
+        })
+      }
+      userData.forEach((element) => {
+        switch (element.Questionid) {
+          case 1:
+            this.users.Name = element.Answer
+            break
+          case 2:
+            this.users.DateOfBirth = element.Answer
+            break
+          case 3:
+            this.users.CityOfResidence = element.Answer
+            break
+          case 4:
+            this.users.Occupation = element.Answer
+            break
+          case 5:
+            this.users.Nationality = element.Answer
+            break
+          case 6:
+            this.users.Hobbies = element.Answer
+            break
+          case 7:
+            this.users.Gender = element.Answer
+            break
+          case 8:
+            this.users.Height = element.Answer
+            break
+          default:
+            break
+        }
+      })
     },
     getCountries: async function () {
       const countries = await SkipAPI.getCountries(get_count)
@@ -219,15 +296,18 @@ export default {
         this.countries = element.country
       })
     },
-    addField(value, fieldType) {
-      fieldType.push({ personid: this.userid, question: '', answer: '' })
+    addField(value, fieldType, event) {
+      if (event) {
+        event.preventDefault()
+      }
+      fieldType.push({ Answer: '', Question: '', Questionid: '', Personid: this.$route.params.id })
     },
     removeField(index, fieldType) {
       fieldType.splice(index, 1)
     }
   },
   mounted() {
-    //this.getQuestion()
+    this.getAnswer()
     this.getCountries()
   }
 }

@@ -160,6 +160,7 @@
 import SkipAPI from '../../api/resources/SkipAPI'
 const abt_path = 'aboutme'
 const url_path = 'answer'
+const del_url_path = 'deleteanswers'
 const getAnswer = 'getanswers'
 const get_count = 'https://countriesnow.space/api/v0.1/countries/population/cities'
 
@@ -303,7 +304,17 @@ export default {
       fieldType.push({ Answer: '', Question: '', Questionid: '', Personid: this.$route.params.id })
     },
     removeField(index, fieldType) {
+      this.delQueAns(fieldType[index].Questionid)
       fieldType.splice(index, 1)
+    },
+    delQueAns: async function (Questionid) {
+      const getPerson = {
+        Personid: this.userid,
+        Questionid: Questionid
+      }
+      const delData = JSON.stringify(getPerson)
+      const delres = await SkipAPI.store(del_url_path, delData)
+      console.log(delres)
     }
   },
   mounted() {

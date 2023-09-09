@@ -217,9 +217,9 @@ export default {
             dismissible: false,
             max: 1
           })
-          /* setInterval(() => {
+           setInterval(() => {
             this.$router.push({ name: 'MyProfile', params: { id: this.userid } })
-          }, 3000)*/
+          }, 3000)
         } else {
           this.$toast.error(getData.message, {
             type: 'error',

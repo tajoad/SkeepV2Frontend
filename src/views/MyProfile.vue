@@ -36,7 +36,9 @@
                     <a class="nav-link text-white" href="#">About You</a>
                   </li>
                   <li class="nav-item py-2">
-                    <a class="nav-link text-white" href="#">Edit Profile</a>
+                    <a class="nav-link text-white" href="#" @click="redirectToAboutme()"
+                      >Edit Profile</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -190,6 +192,9 @@ export default {
     },
     getUserInfo: async function () {
       const user = this.$route.params.id
+    },
+    redirectToAboutme: async function () {
+      this.$router.push({ name: 'Aboutme', params: { id: this.$route.params.id } })
     },
     onFileChange(event) {
       this.formFields.picture = event.target.files[0]

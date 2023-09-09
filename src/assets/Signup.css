@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,400&family=Roboto:wght@300;400;500;700&family=Sora:wght@400;600;700&display=swap');
 .left {
-  background: url('../images/7600.png') no-repeat;
+  background: url('../asset/7600.png') no-repeat;
   background-color: #293462;
   background-size: cover;
   width: 50vw;

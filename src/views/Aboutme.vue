@@ -1,9 +1,34 @@
 <template>
   <div class="row top-main">
     <div class="col-3 left">
-      <div class="img-height">
-        <img src="../images/skeepw.png" alt="" class="main-img" />
-        <h2>Explore</h2>
+      <div class="row img-height">
+        <div class="col img">
+          <img src="../images/skeepw.png" alt="" class="main-img" />
+        </div>
+        <div class="col top-nav">
+          <nav class="navbar navbar-light navbar-expand-lg">
+            <div class="flex-column">
+              <button
+                class="navbar-toggler nav-btn"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarText"
+                aria-controls="navbarText"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse navv2 flex-column" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 navv flex-column mb-lg-0">
+                  <li class="nav-item py-2">
+                    <a class="nav-link text-white" href="#">Explore</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
       </div>
     </div>
     <div class="col-9 right">
@@ -217,7 +242,7 @@ export default {
             dismissible: false,
             max: 1
           })
-           setInterval(() => {
+          setInterval(() => {
             this.$router.push({ name: 'MyProfile', params: { id: this.userid } })
           }, 3000)
         } else {
